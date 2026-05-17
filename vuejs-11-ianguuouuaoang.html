@@ -1,0 +1,1431 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="通过示例了解 Vue.js 框架">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/zh-vuejs-oct-2019/vuejs-11-ianguuouuaoang.html">
+      
+      
+        <link rel="prev" href="iangu-vuejs-10dao-haianiu-http-ingiu.html">
+      
+      
+        <link rel="next" href="iangu-vuejs-12html-iaoeuani.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>13. [vuejs-11] 项目：路由与导航 - 通过示例了解 Vue.js 框架</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "通过示例了解 Vue.js 框架";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#13-vuejs-11" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="通过示例了解 Vue.js 框架" class="md-header__button md-logo" aria-label="通过示例了解 Vue.js 框架" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            通过示例了解 Vue.js 框架
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              13. [vuejs-11] 项目：路由与导航
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/zh-vuejs-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="通过示例了解 Vue.js 框架" class="md-nav__button md-logo" aria-label="通过示例了解 Vue.js 框架" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    通过示例了解 Vue.js 框架
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/zh-vuejs-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vuejs-uangiauen.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. VUE.JS 框架入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aianaiauaning.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 搭建开发环境
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-01ihuian.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 项目 [vuejs-01]：基础篇
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-02hiong-bootstrap-css-uangia.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 项目 [vuejs-02]：使用 Bootstrap CSS 框架
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-03hiianhui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 项目 [vuejs-03]：事件处理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-04hiing-v-model-v-bindiuanhuingiaoanhuu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、表单输入
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vuejs-05-ianguv-for-hiing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. [vuejs-05] 项目：[v-for] 指令
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-06hionghaaouuhiu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. 项目 [vuejs-06]：使用插槽布局视图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-07uianengihongehiianhuano.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. 项目 [vuejs-07]：组件层级中的事件传播
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-08uuianengiuuanehiianuianhenginghoui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. 项目 [vuejs-08]：与组件层级无关的事件，组件生命周期
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-09hiong-eventbus-haian.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. 项目 [vuejs-09]：使用 [eventBus] 插件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-10dao-haianiu-http-ingiu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. 项目 [vuejs-10]：[dao] 插件，异步 HTTP 请求
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. [vuejs-11] 项目：路由与导航
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="vuejs-11-ianguuouuaoang.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. [vuejs-11] 项目：路由与导航
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1. 安装依赖项
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#132-routerjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2. 路由脚本 [router.js]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#133-mainjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3. 主脚本 [main.js]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#134-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4. 主视图 [App]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#135" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.5. 视图布局
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#136" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.6. 导航组件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#137" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.7. 视图
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#138" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.8. 运行项目
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-12html-iaoeuani.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. 项目 [vuejs-12]：HTML 表格管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-13hionguiuaenginuian.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. 项目 [vuejs-13]：使用会话更新组件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-14hiuiuauiiangueiianginghieing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. 项目 [vuejs-14]：使会话对象具备响应式特性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-15hiong-vuex-haian.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. 项目 [vuejs-15]：使用 [Vuex] 插件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="huieiiuanuuie-vuejs-euuan.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. 税费计算服务器的 Vue.js 客户端
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vuejs-euuanaiin.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. Vue.js 客户端改进
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aiuouanuuhanguhueuuanuuiingonghengu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. 在托管服务上部署客户端/服务器应用程序
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="refheadingtoc2480652728496130"></a></p>
+<h1 id="13-vuejs-11">13. <span style="color: #365f91">[vuejs-11] <strong>项目：路由与导航</strong></span></h1>
+<p>路由功能使用户能够在应用程序的不同页面之间进行导航。</p>
+<p>项目目录结构如下：</p>
+<p><img src="images/10000000000001930000019551D01FF3.png" width="141" height="142" style="width:3.731cm;height:3.75cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001930000019551D01FF3.png" /></p>
+<p><a id="refheadingtoc2480672728496130"></a></p>
+<h2 id="131">13.1. <span style="color: #4f81bd">安装依赖项</span></h2>
+<p>在 <strong>[Vue.js]</strong> 中实现路由需要 <strong>[vue-router]</strong> 依赖项：</p>
+<p><img src="images/1000000000000783000002717021C36E.png" width="577" height="187" style="width:15.259cm;height:4.958cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000783000002717021C36E.png" /></p>
+<ul>
+  <li>在 <b>[1-3] </b>中，我们安装了 <b>[vue-router]</b> 依赖项；
+  </li>
+  <li>在 <b>[4-6] </b>中，安装依赖项后，修改了 <b>[package.json]</b> 文件；
+  </li>
+</ul>
+<p><a id="refheadingtoc2480692728496130"></a></p>
+<h2 id="132-routerjs">13.2. <span style="color: #4f81bd"><strong>路由脚本</strong> [router.js]</span></h2>
+<p>应用程序的导航规则定义在 <strong>[router.js]</strong> 文件中（脚本名称可以是任意名称）：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">// imports nécessaires au routage</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Vue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> VueRouter </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;vue-router&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// plugin de routage</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">Vue.use(VueRouter)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// les composants cibles du routage</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Component1 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./components/Component1.vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Component2 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./components/Component2.vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Component3 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./components/Component3.vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// les routes de l&#x27;application</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> routes = [</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// home</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  { path: </span><span style="color:#a31515">&#x27;/&#x27;</span><span style="color:#000000">, name: </span><span style="color:#a31515">&#x27;home&#x27;</span><span style="color:#000000">, component: Component1 },</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Component1</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    path: </span><span style="color:#a31515">&#x27;/vue1&#x27;</span><span style="color:#000000">, name: </span><span style="color:#a31515">&#x27;vue1&#x27;</span><span style="color:#000000">, component: Component1</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Component2</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    path: </span><span style="color:#a31515">&#x27;/vue2&#x27;</span><span style="color:#000000">, name: </span><span style="color:#a31515">&#x27;vue2&#x27;</span><span style="color:#000000">, component: Component2</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Component3</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    path: </span><span style="color:#a31515">&#x27;/vue3&#x27;</span><span style="color:#000000">, name: </span><span style="color:#a31515">&#x27;vue3&#x27;</span><span style="color:#000000">, component: Component3</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// le routeur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> router = </span><span style="color:#0000ff">new</span><span style="color:#000000"> VueRouter({</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  routes,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  mode: </span><span style="color:#a31515">&#x27;history&#x27;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">})</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// export du routeur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> router</span></span></span>
+</code></pre></div>
+
+<p><strong>注释</strong></p>
+<ul>
+  <li><b>[router.js]</b> 脚本将定义我们应用程序的路由规则；
+  </li>
+  <li>第 1–6 行：启用路由所需的 <b>[vue-router]</b> 插件。这需要导入 <b>[Vue]</b> 类/函数（第 2 行）和路由插件（第 3 行）。该插件已随我们刚刚安装的 <b>[router]</b> 依赖项一并安装；
+  </li>
+  <li>第 8–11 行：导入路由的目标视图；
+  </li>
+  <li>第 15–21 行：定义 routes 数组。该数组的每个元素都是一个具有以下属性的对象：
+    <ul>
+      <li><b>[path]</b>：视图的 URL，即我们希望在浏览器 <b>[URL]</b> 字段中显示的地址。您可以自由输入任意内容；
+      </li>
+      <li><b>[name]</b>：路由名称。此处同样可以输入任意内容；
+      </li>
+      <li><b>[component]</b>：用于显示该视图的组件。此处必须指定已存在的组件；
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>因此这里共有四条路由<strong>：[/]、/view1、/view2、/view3</strong>。</p>
+<ul>
+  <li>第 33–36 行：路由器是第 3 行导入的 <b>[VueRouter]</b> 类的实例。此处的 <b>[VueRouter]</b> 构造函数使用了两个参数：
+    <ul>
+      <li>应用程序的路由；
+      </li>
+      <li>浏览器中 URL 的写入模式：默认模式 <b>[hash]</b> 生成 <b>[localhost:8080/#/view1]</b> 格式的 URL（# 表示哈希）。<b>[history]</b> 模式则移除 #，生成 <b>[localhost:8080/view1]</b>；
+      </li>
+    </ul>
+  </li>
+  <li>第 39 行：导出路由器；
+  </li>
+</ul>
+<p><a id="refheadingtoc2480712728496130"></a></p>
+<h2 id="133-mainjs">13.3. <span style="color: #4f81bd"><strong>主脚本</strong> [main.js]</span></h2>
+<p>主脚本 <strong>[main.js]</strong> 如下：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Vue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> App </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./App.vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// plugins</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> BootstrapVue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap-vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">Vue.use(BootstrapVue);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// bootstrap</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap/dist/css/bootstrap.css&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap-vue/dist/bootstrap-vue.css&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// routeur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="background-color:#ffff00;color:#000000">monRouteur</span><span style="color:#000000"> </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./router&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// configuration</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Vue.config.productionTip = </span><span style="color:#0000ff">false</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// instanciation projet [App]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">new</span><span style="color:#000000"> Vue({</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// vue principale</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  render: h =&gt; h(App),</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// routeur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="background-color:#e0c2cd;color:#000000">router</span><span style="color:#000000">: </span><span style="background-color:#ffff00;color:#000000">monRouteur</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}).$mount(</span><span style="color:#a31515">&#x27;#app&#x27;</span><span style="color:#000000">)</span></span></span>
+</code></pre></div>
+
+<p><strong>注释</strong></p>
+<ul>
+  <li>第 14 行：我们导入了由 <b>[router.js]</b> 脚本导出的路由器；
+  </li>
+  <li>第 25 行：将此路由器作为参数传递给 <b>[View]</b> 类的构造函数，该构造函数将显示主视图 <b>[App]</b>，该视图与视图的 <b>[router]</b> 属性相关联；
+  </li>
+</ul>
+<p><a id="refheadingtoc2480732728496130"></a></p>
+<h2 id="134-app">13.4. <span style="color: #4f81bd"><strong>主视图</strong> [App]</span></h2>
+<p>主视图的代码如下：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#000000"> </span><span style="color:#ff0000">class</span><span style="color:#0000ff">=&quot;container&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- a message --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;success&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">[vuejs-11]</span><span style="color:#000000"> : routage et navigation</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- the current routing view --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">router-view</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;app&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p><strong>注释</strong></p>
+<ul>
+  <li>第 9 行：在路由器中显示当前视图。只有当视图的 <b>[router]</b> 属性已初始化时，才会识别 &lt;<b>router-view</b>&gt; 标签；
+  </li>
+</ul>
+<p><a id="refheadingtoc2480752728496130"></a></p>
+<h2 id="135">13.5. <span style="color: #4f81bd">视图布局</span></h2>
+<p>视图布局由以下 <strong>[Layout]</strong> 组件处理：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- line --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- three-column zone --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;2&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;left&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">slot</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;left&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- nine-column zone --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;10&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;right&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">slot</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;right&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// paramètres</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    props: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      left: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        type: Boolean</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      right: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        type: Boolean</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p>我们在<strong>[vuejs-06]</strong>项目的<a href="#17projet-vuejs-06--mise-en-page-dune-vue-avec-des-slotsoutline"><u><span style="color: #0563c1">[vuejs-06]</span></u></a>章节中已经使用并讲解过这种布局。</p>
+<p><a id="refheadingtoc2480772728496130"></a></p>
+<h2 id="136">13.6. <span style="color: #4f81bd">导航组件</span></h2>
+<p><strong>[Navigation]</strong> 组件为用户提供导航菜单：</p>
+<p><img src="images/100000000000029F00000282F75F1E89.png" width="168" height="161" style="width:4.44cm;height:4.247cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000029F00000282F75F1E89.png" /></p>
+<p>生成块 <strong>[1]</strong> 的组件如下所示：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- bootstrap menu with three options --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-nav</span><span style="color:#000000"> </span><span style="color:#ff0000">vertical</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-nav-item</span><span style="color:#000000"> </span><span style="color:#ff0000">to</span><span style="color:#0000ff">=&quot;/vue1&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">exact</span><span style="color:#000000"> </span><span style="color:#ff0000">exact-active-class</span><span style="color:#0000ff">=&quot;active&quot;&gt;</span><span style="color:#000000">Vue 1</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-nav-item</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-nav-item</span><span style="color:#000000"> </span><span style="color:#ff0000">to</span><span style="color:#0000ff">=&quot;/vue2&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">exact</span><span style="color:#000000"> </span><span style="color:#ff0000">exact-active-class</span><span style="color:#0000ff">=&quot;active&quot;&gt;</span><span style="color:#000000">Vue 2</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-nav-item</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-nav-item</span><span style="color:#000000"> </span><span style="color:#ff0000">to</span><span style="color:#0000ff">=&quot;/vue3&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">exact</span><span style="color:#000000"> </span><span style="color:#ff0000">exact-active-class</span><span style="color:#0000ff">=&quot;active&quot;&gt;</span><span style="color:#000000">Vue 3</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-nav-item</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-nav</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<ul>
+  <li>此代码生成三个导航链接中的第一个；
+  </li>
+  <li>&lt;b-nav-item&gt; 标签的 <b>[to]</b> 属性必须与应用程序路由器路由中的某个 <b>[path]</b> 属性匹配；
+  </li>
+</ul>
+<p><a id="refheadingtoc2480792728496130"></a></p>
+<h2 id="137">13.7. <span style="color: #4f81bd">视图</span></h2>
+<p>视图 #1 如下：</p>
+<p><img src="images/100000000000064F0000027D0D352B4D.png" width="404" height="159" style="width:10.68cm;height:4.212cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000064F0000027D0D352B4D.png" /></p>
+<p>区域 <strong>[3-4]</strong> 由以下 <strong>[Component1]</strong> 组件生成：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span><span style="color:#0000ff">=&quot;true&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:right</span><span style="color:#0000ff">=&quot;true&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;left&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- message--&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;right&quot;&gt;</span><span style="color:#000000">Vue 1</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">Layout</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Navigation&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Layout&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;</span><span style="background-color:#ffff00;color:#a31515">component1</span><span style="color:#a31515">&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// composants utilisés</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    components: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      Layout, Navigation</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p><strong>评论</strong></p>
+<ul>
+  <li>第 2 行：视图 #1 使用 <b>[Layout]</b> 组件的布局，该布局由两个名为 <b>[left] 和 [right] </b>的插槽组成；
+  </li>
+  <li>第 4 行：导航菜单被放置在左侧插槽中。这就是上文中显示的区域 <b>[3]</b>；
+  </li>
+  <li>第 6 行：一条消息被放置在右侧插槽中。这就是上文中显示的区域 <b>[4]</b>；
+  </li>
+</ul>
+
+<p>视图 2 和 3 与此类似。</p>
+<p>由 <strong>[Component2]</strong> 组件显示的视图 #2：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- vue n° 2 --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span><span style="color:#0000ff">=&quot;true&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:right</span><span style="color:#0000ff">=&quot;true&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;left&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- message --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;secondary&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;right&quot;&gt;</span><span style="color:#000000">Vue 2</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">Layout</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Navigation&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Layout&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;</span><span style="background-color:#ffff00;color:#a31515">component2</span><span style="color:#a31515">&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// composants de la vue</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    components: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      Layout, Navigation</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p>由 <strong>[Component3]</strong> 组件显示的视图 #3：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- vue n° 3 --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span><span style="color:#0000ff">=&quot;true&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:right</span><span style="color:#0000ff">=&quot;true&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;left&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- message --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;info&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;right&quot;&gt;</span><span style="color:#000000">Vue 3</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">Layout</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./Navigation&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./Layout&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;</span><span style="background-color:#ffff00;color:#a31515">component3</span><span style="color:#a31515">&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// composants de la vue</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    components: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      Layout,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      Navigation</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p><a id="refheadingtoc2480812728496130"></a></p>
+<h2 id="138">13.8. <span style="color: #4f81bd"><strong><span style="color: #4f81bd">运行项目</span></strong></span></h2>
+<p><img src="images/10000000000006EE0000022C1408C263.png" width="532" height="167" style="width:14.079cm;height:4.413cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006EE0000022C1408C263.png" /></p>
+<p>执行后，将显示以下视图：</p>
+<p><img src="images/10000000000005F600000276BAF9C18A.png" width="381" height="157" style="width:10.089cm;height:4.165cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005F600000276BAF9C18A.png" /></p>
+<ul>
+  <li>在 <b>[1] </b>中，URL 为 <b>[http://localhost:8080]</b>。随后执行了以下路由规则：
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">{ path: </span><span style="color:#a31515">&#x27;</span><span style="background-color:#ffff00;color:#a31515">/</span><span style="color:#a31515">&#x27;</span><span style="color:#000000">, name: </span><span style="color:#a31515">&#x27;home&#x27;</span><span style="color:#000000">, component: Component1 }</span></span></span>
+</code></pre></div>
+
+<p>因此，显示了 <strong>[Component1]</strong> 组件。它显示视图 #1 <strong>[2]</strong>。现在，让我们点击 <strong>[View 1]</strong> 链接，其代码如下：</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-nav-item</span><span style="color:#000000"> </span><span style="color:#ff0000">to</span><span style="color:#0000ff">=&quot;</span><span style="background-color:#ffff00;color:#0000ff">/vue1</span><span style="color:#0000ff">&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">exact</span><span style="color:#000000"> </span><span style="color:#ff0000">exact-active-class</span><span style="color:#0000ff">=&quot;active&quot;&gt;</span><span style="color:#000000">Vue 1</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-nav-item</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p>当前显示效果如下：</p>
+<ul>
+  <li>在 <b>[3] </b>中，执行了以下路由规则：
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">path: </span><span style="color:#a31515">&#x27;</span><span style="background-color:#ffff00;color:#a31515">/vue1</span><span style="color:#a31515">&#x27;</span><span style="color:#000000">, name: </span><span style="color:#a31515">&#x27;vue1&#x27;</span><span style="color:#000000">, component: Component1</span></span></span>
+</code></pre></div>
+
+<p>因此，<strong>[Component1]</strong> 组件再次被显示，从而呈现了视图 1 <strong>[4]</strong>。现在，让我们点击 <strong>[View 2]</strong> 链接，其代码如下：</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-nav-item</span><span style="color:#000000"> </span><span style="color:#ff0000">to</span><span style="color:#0000ff">=&quot;</span><span style="background-color:#ffff00;color:#0000ff">/vue2</span><span style="color:#0000ff">&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">exact</span><span style="color:#000000"> </span><span style="color:#ff0000">exact-active-class</span><span style="color:#0000ff">=&quot;active&quot;&gt;</span><span style="color:#000000">Vue 2</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-nav-item</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p>此时，新的视图如下所示：</p>
+<p><img src="images/10000000000002D10000028345F88051.png" width="180" height="161" style="width:4.77cm;height:4.255cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D10000028345F88051.png" /></p>
+<ul>
+  <li>在 <b>[5] </b>中，执行了以下路由规则：
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">path: </span><span style="color:#a31515">&#x27;</span><span style="background-color:#ffff00;color:#a31515">/vue2</span><span style="color:#a31515">&#x27;</span><span style="color:#000000">, name: </span><span style="color:#a31515">&#x27;vue2&#x27;</span><span style="color:#000000">, component: Component2</span></span></span>
+</code></pre></div>
+
+<p>因此，显示了 <strong>[Component2]</strong> 组件，即视图 2。如果现在点击 <strong>[View 3]</strong> 链接，其代码如下：</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-nav-item</span><span style="color:#000000"> </span><span style="color:#ff0000">to</span><span style="color:#0000ff">=&quot;</span><span style="background-color:#ffff00;color:#0000ff">/vue3</span><span style="color:#0000ff">&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">exact</span><span style="color:#000000"> </span><span style="color:#ff0000">exact-active-class</span><span style="color:#0000ff">=&quot;active&quot;&gt;</span><span style="color:#000000">Vue 3</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-nav-item</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p>我们将看到以下新的视图：</p>
+<p><img src="images/10000000000002D200000247B35F1259.png" width="180" height="146" style="width:4.77cm;height:3.852cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D200000247B35F1259.png" /></p>
+<ul>
+  <li>在 <b>[6] </b>中，执行了以下路由规则：
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">path: </span><span style="color:#a31515">&#x27;</span><span style="background-color:#ffff00;color:#a31515">/vue3</span><span style="color:#a31515">&#x27;</span><span style="color:#000000">, name: </span><span style="color:#a31515">&#x27;vue3&#x27;</span><span style="color:#000000">, component: Component3</span></span></span>
+</code></pre></div>
+
+<p>因此，显示了 <strong>[Component3]</strong> 组件，即视图 #3 <strong>[8]</strong>。</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        本教程由 <strong>Serge Tahé</strong> 编写，根据
+<em>知识共享 署名-非商业性使用-
+相同方式共享 3.0 未移植</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>

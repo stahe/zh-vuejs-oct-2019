@@ -1,0 +1,1245 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="通过示例了解 Vue.js 框架">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/zh-vuejs-oct-2019/iangu-vuejs-06hionghaaouuhiu.html">
+      
+      
+        <link rel="prev" href="vuejs-05-ianguv-for-hiing.html">
+      
+      
+        <link rel="next" href="iangu-vuejs-07uianengihongehiianhuano.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>8. 项目 [vuejs-06]：使用插槽布局视图 - 通过示例了解 Vue.js 框架</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "通过示例了解 Vue.js 框架";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#8-vuejs-06" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="通过示例了解 Vue.js 框架" class="md-header__button md-logo" aria-label="通过示例了解 Vue.js 框架" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            通过示例了解 Vue.js 框架
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              8. 项目 [vuejs-06]：使用插槽布局视图
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/zh-vuejs-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="通过示例了解 Vue.js 框架" class="md-nav__button md-logo" aria-label="通过示例了解 Vue.js 框架" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    通过示例了解 Vue.js 框架
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/zh-vuejs-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vuejs-uangiauen.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. VUE.JS 框架入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aianaiauaning.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 搭建开发环境
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-01ihuian.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 项目 [vuejs-01]：基础篇
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-02hiong-bootstrap-css-uangia.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 项目 [vuejs-02]：使用 Bootstrap CSS 框架
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-03hiianhui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 项目 [vuejs-03]：事件处理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-04hiing-v-model-v-bindiuanhuingiaoanhuu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、表单输入
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vuejs-05-ianguv-for-hiing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. [vuejs-05] 项目：[v-for] 指令
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. 项目 [vuejs-06]：使用插槽布局视图
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="iangu-vuejs-06hionghaaouuhiu.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. 项目 [vuejs-06]：使用插槽布局视图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#81-mainjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. 主脚本 [main.js]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. 主组件 [App]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3. [Layout] 组件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#84-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4. [Right]组件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#85-left" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5. [Left] 组件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#86-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6. [Content] 组件
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-07uianengihongehiianhuano.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. 项目 [vuejs-07]：组件层级中的事件传播
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-08uuianengiuuanehiianuianhenginghoui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. 项目 [vuejs-08]：与组件层级无关的事件，组件生命周期
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-09hiong-eventbus-haian.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. 项目 [vuejs-09]：使用 [eventBus] 插件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-10dao-haianiu-http-ingiu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. 项目 [vuejs-10]：[dao] 插件，异步 HTTP 请求
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vuejs-11-ianguuouuaoang.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. [vuejs-11] 项目：路由与导航
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-12html-iaoeuani.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. 项目 [vuejs-12]：HTML 表格管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-13hionguiuaenginuian.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. 项目 [vuejs-13]：使用会话更新组件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-14hiuiuauiiangueiianginghieing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. 项目 [vuejs-14]：使会话对象具备响应式特性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-15hiong-vuex-haian.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. 项目 [vuejs-15]：使用 [Vuex] 插件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="huieiiuanuuie-vuejs-euuan.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. 税费计算服务器的 Vue.js 客户端
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vuejs-euuanaiin.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. Vue.js 客户端改进
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aiuouanuuhanguhueuuanuuiingonghengu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. 在托管服务上部署客户端/服务器应用程序
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="refheadingtoc240162385722848"></a></p>
+<h1 id="8-vuejs-06">8. <span style="color: #365f91"><strong>项目</strong> [vuejs-06]<strong>：使用插槽布局视图</strong></span></h1>
+<p><img src="images/10000000000000EE00000197C8940A10.png" width="83" height="142" style="width:2.2cm;height:3.762cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EE00000197C8940A10.png" /></p>
+<p><a id="refheadingtoc2479932728496130"></a></p>
+<h2 id="81-mainjs">8.1. <span style="color: #4f81bd"><strong>主脚本</strong> [main.js]</span></h2>
+<p>主脚本 <strong>[main.js]</strong> 保持不变。</p>
+<p><a id="refheadingtoc2479952728496130"></a></p>
+<h2 id="82-app">8.2. <span style="color: #4f81bd"><strong>主组件</strong> [App]</span></h2>
+<p><strong>[App]</strong> 组件的代码如下：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#000000"> </span><span style="color:#ff0000">class</span><span style="color:#0000ff">=&quot;container&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;success&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">[vuejs-06]</span><span style="color:#000000"> : mise en page avec des slots</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Content</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Content </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./components/Content&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// composants utilisés</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    components: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      Content</span><span style="color:#000000"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p><strong>[App]</strong> 组件引入了一个名为 <strong>[Content]</strong> 的新组件（第 7、14、19 行）。</p>
+<p><a id="refheadingtoc2479972728496130"></a></p>
+<h2 id="83-layout">8.3. <span style="color: #4f81bd">[Layout] <strong>组件</strong></span></h2>
+<p><strong>[Layout]</strong> 组件用于定义应用程序视图的布局：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- line --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- three-column zone --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;3&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;left&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">slot</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;slot-left&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- nine-column zone --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;9&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;right&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">slot</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;slot-right&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;patron&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// paramètres</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    props: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      left: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        type: Boolean</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      right: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        type: Boolean</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p><strong>评论</strong></p>
+<ul>
+  <li><b>[Layout]</b> 组件定义了一行（第 3–12 行）。该行被划分为两列：
+    <ul>
+      <li>由 3 个 Bootstrap 列组成的列（第 5–7 行）；
+      </li>
+      <li>一个由 9 个 Bootstrap 列组成的列（第 9–11 行）；
+      </li>
+    </ul>
+  </li>
+  <li>第 5 行：左侧列（第 5–7 行）是否存在取决于组件 <b>[props]</b> 属性中定义的 <b>[left]</b> 参数的值（第 20–22 行）；
+  </li>
+  <li>第 9 行：右侧列（第 9–11 行）的显示取决于组件 <b>[props]</b> 属性中定义的 <b>[right]</b> 参数的值（第 23–25 行）；
+  </li>
+  <li><b>[left, right]</b> 参数的值必须由 <b>[Layout]</b> 组件的父组件设置；
+  </li>
+  <li>第 6 行：左侧栏的内容尚未指定。我们仅通过 &lt;slot&gt; 标签为该栏命名。此处，它将被称为 <b>[slot-left]</b>。使用 <b>[Content]</b> 组件的组件必须指定其希望放置在名为 <b>[slot-left] </b>的区域中的内容；
+  </li>
+  <li>第 10 行：右侧栏将命名为 <b>[slot-right]</b>；
+  </li>
+</ul>
+<p><a id="refheadingtoc2479992728496130"></a></p>
+<h2 id="84-right">8.4. <span style="color: #4f81bd">[Right]<strong>组件</strong></span></h2>
+<p><strong>[Right]</strong> 组件如下所示：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- a message in a warning-type alert --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">{{</span><span style="color:#800080">msg</span><span style="font-weight:bold;color:#000000">}}</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- script --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;droite&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// paramètres</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    props: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      msg: String</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<ul>
+  <li>第 3–5 行：<b>[Right]</b> 组件在 <b>[warning]</b> 提示框中显示一条消息。该消息 <b>[msg] </b>在第 14 行被定义为组件参数。因此，父组件必须为其提供一个值；
+  </li>
+</ul>
+<p><a id="refheadingtoc2480012728496130"></a></p>
+<h2 id="85-left">8.5. <span style="color: #4f81bd">[Left] <strong>组件</strong></span></h2>
+<p><strong>[Left]</strong> 组件如下所示：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- a message in a primary alert --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">{{</span><span style="color:#800080">msg</span><span style="font-weight:bold;color:#000000">}}</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- script --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;gauche&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// paramètres</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    props: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      msg: String</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<ul>
+  <li>第 3–5 行：<b>[Left]</b> 组件在 <b>[primary]</b> 警报中显示一条消息。该消息 <b>[msg] </b>在第 14 行被定义为组件参数。因此，父组件必须为其提供一个值；
+  </li>
+</ul>
+<p><a id="refheadingtoc2480032728496130"></a></p>
+<h2 id="86-content">8.6. <span style="color: #4f81bd">[Content] <strong>组件</strong></span></h2>
+<p>请注意，<strong>[Content]</strong> 组件是主视图 <strong>[App.vue]</strong> 所显示的组件：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- colonnes gauche et droite remplies --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span><span style="color:#0000ff">=&quot;true&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:right</span><span style="color:#0000ff">=&quot;true&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Right</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;slot-right&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">msg</span><span style="color:#0000ff">=&quot;slot </span><span style="font-weight:bold;color:#0000ff">[slot-right]</span><span style="color:#0000ff"> présent et rempli&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Left</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;slot-left&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">msg</span><span style="color:#0000ff">=&quot;slot </span><span style="font-weight:bold;color:#0000ff">[slot-left]</span><span style="color:#0000ff"> présent et rempli&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">Layout</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- colonnes gauche basente. colonne droite remplie --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span><span style="color:#0000ff">=&quot;false&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:right</span><span style="color:#0000ff">=&quot;true&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Right</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;slot-right&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">msg</span><span style="color:#0000ff">=&quot;slot </span><span style="font-weight:bold;color:#0000ff">[slot-right]</span><span style="color:#0000ff"> présent et rempli, slot </span><span style="font-weight:bold;color:#0000ff">[slot-left]</span><span style="color:#0000ff"> absent&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">Layout</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- colonnes gauche remplie, colonne droite absente --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span><span style="color:#0000ff">=&quot;true&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:right</span><span style="color:#0000ff">=&quot;false&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Left</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;slot-left&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">msg</span><span style="color:#0000ff">=&quot;slot </span><span style="font-weight:bold;color:#0000ff">[slot-left]</span><span style="color:#0000ff"> présent et rempli, slot </span><span style="font-weight:bold;color:#0000ff">[slot-right]</span><span style="color:#0000ff"> absent&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">Layout</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- colonnes gauche présente mais pas remplie, colonne droite remplie --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span><span style="color:#0000ff">=&quot;true&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:right</span><span style="color:#0000ff">=&quot;true&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Right</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;slot-right&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">msg</span><span style="color:#0000ff">=&quot;slot </span><span style="font-weight:bold;color:#0000ff">[slot-right]</span><span style="color:#0000ff"> présent et rempli, slot </span><span style="font-weight:bold;color:#0000ff">[slot-left]</span><span style="color:#0000ff"> présent mais vide&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">Layout</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- script --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./Layout&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Left </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./Left&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Right </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./Right&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;contenu&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// composants</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    components: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      Layout,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      Left,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      Right</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p><strong>可视化渲染</strong></p>
+<p><img src="images/10000000000008C7000004ED4A6C9A12.png" width="562" height="315" style="width:14.863cm;height:8.341cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008C7000004ED4A6C9A12.png" /></p>
+<p><strong>注释</strong></p>
+<ul>
+  <li><b>[Layout]</b> 组件被使用了 4 次（第 4–7 行、第 9–11 行、第 13–15 行、第 17–19 行）。由于 <b>[Layout]</b> 组件定义了 1 行，因此上方的<b> [template]</b> 定义了 4 行。此外，<b>[Layout]</b> 行定义了两个列：
+    <ul>
+      <li>一个名为 <b>[slot-left] </b>的列，占据 Bootstrap 的 3 个左侧列；
+      </li>
+      <li>一个名为 <b>[slot-right] </b>的列，占用 Bootstrap 的 9 个右侧列；
+      </li>
+    </ul>
+  </li>
+  <li>第 4–7 行：定义一个 <b>[1]</b> 行，其中 <b>[Left]</b> 组件占据 <b>[slot-left]</b> 列，<b>[Right]</b> 组件占据 <b>[slot-right]</b> 列；
+  </li>
+  <li>第 9–11 行：定义了一个 <b>[2]</b> 行，其中 <b>[slot-left]</b> 列不显示，而 <b>[Right]</b> 组件占据 <b>[slot-right]</b> 列；
+  </li>
+  <li>第 13–15 行：定义一行 <b>[3]</b>，其中 <b>[slot-right]</b> 列不显示，而 <b>[Left]</b> 组件占据 <b>[slot-left]</b> 列；
+  </li>
+  <li>第 17–19 行：定义一行 <b>[4]</b>，其中 <b>[slot-left]</b> 列显示 <b>[:left=’true’] </b>但未填充，而 <b>[Right]</b> 组件占据 <b>[slot-right]</b> 列；
+  </li>
+</ul>
+
+<p>最终，<strong>[Layout]</strong> 组件作为 <strong>[Content]</strong> 组件的布局。</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        本教程由 <strong>Serge Tahé</strong> 编写，根据
+<em>知识共享 署名-非商业性使用-
+相同方式共享 3.0 未移植</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>

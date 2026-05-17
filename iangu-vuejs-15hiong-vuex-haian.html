@@ -1,0 +1,1288 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="通过示例了解 Vue.js 框架">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/zh-vuejs-oct-2019/iangu-vuejs-15hiong-vuex-haian.html">
+      
+      
+        <link rel="prev" href="iangu-vuejs-14hiuiuauiiangueiianginghieing.html">
+      
+      
+        <link rel="next" href="huieiiuanuuie-vuejs-euuan.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>17. 项目 [vuejs-15]：使用 [Vuex] 插件 - 通过示例了解 Vue.js 框架</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "通过示例了解 Vue.js 框架";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#17-vuejs-15-vuex" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="通过示例了解 Vue.js 框架" class="md-header__button md-logo" aria-label="通过示例了解 Vue.js 框架" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            通过示例了解 Vue.js 框架
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              17. 项目 [vuejs-15]：使用 [Vuex] 插件
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/zh-vuejs-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="通过示例了解 Vue.js 框架" class="md-nav__button md-logo" aria-label="通过示例了解 Vue.js 框架" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    通过示例了解 Vue.js 框架
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/zh-vuejs-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vuejs-uangiauen.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. VUE.JS 框架入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aianaiauaning.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 搭建开发环境
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-01ihuian.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 项目 [vuejs-01]：基础篇
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-02hiong-bootstrap-css-uangia.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 项目 [vuejs-02]：使用 Bootstrap CSS 框架
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-03hiianhui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 项目 [vuejs-03]：事件处理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-04hiing-v-model-v-bindiuanhuingiaoanhuu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、表单输入
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vuejs-05-ianguv-for-hiing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. [vuejs-05] 项目：[v-for] 指令
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-06hionghaaouuhiu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. 项目 [vuejs-06]：使用插槽布局视图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-07uianengihongehiianhuano.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. 项目 [vuejs-07]：组件层级中的事件传播
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-08uuianengiuuanehiianuianhenginghoui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. 项目 [vuejs-08]：与组件层级无关的事件，组件生命周期
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-09hiong-eventbus-haian.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. 项目 [vuejs-09]：使用 [eventBus] 插件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-10dao-haianiu-http-ingiu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. 项目 [vuejs-10]：[dao] 插件，异步 HTTP 请求
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vuejs-11-ianguuouuaoang.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. [vuejs-11] 项目：路由与导航
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-12html-iaoeuani.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. 项目 [vuejs-12]：HTML 表格管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-13hionguiuaenginuian.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. 项目 [vuejs-13]：使用会话更新组件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iangu-vuejs-14hiuiuauiiangueiianginghieing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. 项目 [vuejs-14]：使会话对象具备响应式特性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. 项目 [vuejs-15]：使用 [Vuex] 插件
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="iangu-vuejs-15hiong-vuex-haian.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. 项目 [vuejs-15]：使用 [Vuex] 插件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#171-vuex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.1. 安装 [vuex] 依赖项
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#172-sessionjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.2. [./session.js] 脚本
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#173-mainjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.3. 主脚本 [./main.js]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#174-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.4. 主视图 [App]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#175-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.5. [Table] 组件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#176" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.6. 结论
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="huieiiuanuuie-vuejs-euuan.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. 税费计算服务器的 Vue.js 客户端
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vuejs-euuanaiin.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. Vue.js 客户端改进
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aiuouanuuhanguhueuuanuuiingonghengu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. 在托管服务上部署客户端/服务器应用程序
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="refheadingtoc2481072728496130"></a></p>
+<h1 id="17-vuejs-15-vuex">17. <span style="color: #365f91"><strong>项目</strong> [vuejs-15]<strong>：使用</strong> [Vuex] <strong>插件</strong></span></h1>
+<p><strong>[vuejs-15]</strong> 项目在 <strong>[vuejs-14]</strong> 项目的基础上，使用了由 <strong>[Vuex]</strong> 生成的响应式 <strong>[session]</strong> 对象。项目结构如下：</p>
+<p><img src="images/100000000000014800000106B78F3A51.png" width="115" height="92" style="width:3.039cm;height:2.427cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000014800000106B78F3A51.png" /></p>
+<p><a id="refheadingtoc2481092728496130"></a></p>
+<h2 id="171-vuex">17.1. <span style="color: #4f81bd"><strong>安装</strong> [vuex] <strong>依赖项</strong></span></h2>
+<p><img src="images/10000000000007CF000002EFEA862285.png" width="600" height="225" style="width:15.87cm;height:5.962cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007CF000002EFEA862285.png" /></p>
+<p><a id="refheadingtoc2481112728496130"></a></p>
+<h2 id="172-sessionjs">17.2. <span style="color: #4f81bd">[./session.js] 脚本</span></h2>
+<p><strong>[session]</strong> 对象变为如下形式：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">// plugin Vuex</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Vue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Vuex </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;vuex&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">Vue.use(Vuex);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// la session est un store Vuex</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> session = </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">Vuex</span><span style="color:#000000">.Store({</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  state: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// le tableau des simulations</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    lignes: []</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  mutations: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// génération de la liste des simulations</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    generateLignes(state) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// eslint-disable-next-line no-console</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;mutation generateLignes&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// on initialise [state.lignes]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      state.lignes =</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        [</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          { id: 3, marié: </span><span style="color:#a31515">&quot;oui&quot;</span><span style="color:#000000">, enfants: 2, salaire: 35000, impôt: 1200 },</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          { id: 5, marié: </span><span style="color:#a31515">&quot;non&quot;</span><span style="color:#000000">, enfants: 2, salaire: 35000, impôt: 1900 },</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          { id: 7, marié: </span><span style="color:#a31515">&quot;non&quot;</span><span style="color:#000000">, enfants: 0, salaire: 30000, impôt: 2000 }</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        ];</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// eslint-disable-next-line no-console</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      console.log(state.lignes);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// suppression ligne n° index</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    deleteLigne(state, index) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// eslint-disable-next-line no-console</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;mutation deleteLigne&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// on supprime la ligne n° [index]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      state.lignes.splice(index, 1);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// export de l&#x27;objet [session]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> session;</span></span></span>
+</code></pre></div>
+
+<p><strong>注释</strong></p>
+<ul>
+  <li>第 2-4 行：我们将 <b>[Vuex]</b> 插件集成到 <b>[Vue]</b> 框架中；
+  </li>
+  <li>第 7 行：该会话成为一个 <b>[Vuex.Store]</b> 对象；
+  </li>
+  <li>第 8–11 行：<b>[state]</b> 属性包含 <b>[Vue]</b> 应用程序的共享状态。该属性可供应用程序的所有组件访问。在此，我们共享了模拟数组 <b>[lines]</b>（第 10 行）；
+  </li>
+  <li>第 12–35 行：<b>[mutations]</b> 属性包含用于修改 <b>[state]</b> 对象内容的方法；
+  </li>
+  <li>第 14–26 行：<b>[generateLines]</b> 属性是一个函数，用于为 <b>[state.lines]</b> 属性生成初始值。此处，它将 <b>[state]</b> 作为参数。第 18–23 行：初始化 <b>[state.lines]</b> 属性；
+  </li>
+  <li>第 28–35 行：<b>[deleteLine]</b> 属性是一个函数，用于从数组 <b>[state.lines] </b>中移除一行。其参数为：
+    <ul>
+      <li><b>[state]，</b>代表第 8–11 行定义的对象；
+      </li>
+      <li><b>[index]，</b>即待删除行的索引号；
+      </li>
+    </ul>
+  </li>
+  <li><b>[mutations]</b> 属性的函数始终将第 8 行中的 <b>[state]</b> 属性对象作为第一个参数。后续参数由调用该变异操作的代码提供；
+  </li>
+  <li>第 37 行：导出 <b>[session]</b> 对象。
+  </li>
+</ul>
+
+<p>与之前的项目 <strong>[vuejs-13]</strong> 不同<strong>，</strong>这里我们不会使用插件，因此组件无法通过 <strong>[Vue.$session]</strong> 属性访问会话。</p>
+<p><a id="refheadingtoc2481132728496130"></a></p>
+<h2 id="173-mainjs">17.3. <span style="color: #4f81bd"><strong>主脚本</strong> [./main.js]</span></h2>
+<p>主脚本演变如下：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Vue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> App </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./App.vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// plugins</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> BootstrapVue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap-vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">Vue.use(BootstrapVue);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// bootstrap</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap/dist/css/bootstrap.css&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap-vue/dist/bootstrap-vue.css&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// session</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> session </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./session&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// configuration</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Vue.config.productionTip = </span><span style="color:#0000ff">false</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// instanciation projet [App]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">new</span><span style="color:#000000"> Vue({</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// utilisation store de Vuex</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  store: session,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  render: h =&gt; h(App),</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}).$mount(</span><span style="color:#a31515">&#x27;#app&#x27;</span><span style="color:#000000">)</span></span></span>
+</code></pre></div>
+
+<p><strong>注释</strong></p>
+<ul>
+  <li>第 14 行：导入会话；
+  </li>
+  <li>第 23 行：将其作为名为 <b>[store] </b>的属性传递给主视图（这是必需的）。 得益于 <b>[Vuex]</b> 插件，该属性随后可通过 <b>[Vue.$store]</b> 属性在所有组件中使用。因此，我们的配置与前一个项目非常相似：在组件中，我们以前通过 <b>[this.$session]</b> 访问会话，现在将通过 <b>[this.$store]</b> 访问；
+  </li>
+</ul>
+<p><a id="refheadingtoc2481152728496130"></a></p>
+<h2 id="174-app">17.4. <span style="color: #4f81bd"><strong>主视图</strong> [App]</span></h2>
+<p><strong>[App]</strong> 的主视图将发生如下变化：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#000000"> </span><span style="color:#ff0000">class</span><span style="color:#0000ff">=&quot;container&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- message --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;success&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">[vuejs-14]</span><span style="color:#000000"> : utilisation du plugin </span><span style="font-weight:bold;color:#000000">[Vuex]</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- table HTML --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Table</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Table </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./components/Table&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// nom</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// composants</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  components: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    Table</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// cycle de vie</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  created() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// génération du tableau des simulations</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.$store.commit(</span><span style="color:#a31515">&quot;generateLignes&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p><strong>评论</strong></p>
+<ul>
+  <li>第 9 行：<b>[App]</b> 视图使用了 <b>[Table]</b> 组件，但由于 <b>[Vuex]</b> 存储是<b>响应式的</b>，因此不再接收来自该组件的事件；
+  </li>
+  <li>第 24–27 行：<b>[created]</b> 方法在 <b>[App]</b> 组件创建后立即执行。在此方法中，调用了 <b>[generateLines]</b> 函数，该函数为 simulations 数组生成初始值。请注意该语句的特定语法。回顾一下，<b>[this.$store]</b> 表示 <b>[main.js] </b>中实例化视图的 <b>[store]</b> 属性：
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// instanciation vue [App]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">new</span><span style="color:#000000"> Vue({</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// utilisation store de Vuex</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="background-color:#ffff00;color:#000000">store: session</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  render: h =&gt; h(App),</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}).$mount(</span><span style="color:#a31515">&#x27;#app&#x27;</span><span style="color:#000000">)</span></span></span>
+</code></pre></div>
+
+<p>因此，<strong>[this.$store]</strong> 表示 <strong>[session]</strong> 对象。接着，我们编写 <strong>[this.$store.commit(&quot;generateLines&quot;)]</strong> 来执行名为 <strong>[generateLines]</strong> 的变异操作。该变异操作是一个函数；</p>
+<p><a id="refheadingtoc2481172728496130"></a></p>
+<h2 id="175-table">17.5. <span style="color: #4f81bd">[Table] <strong>组件</strong></span></h2>
+<p><strong>[Table]</strong> 组件的演变如下：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- empty list --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;lignes.length==0&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Votre liste de simulations est vide</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- reload button--&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">@click</span><span style="color:#0000ff">=&quot;rechargerListe&quot;&gt;</span><span style="color:#000000">Recharger la liste</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-button</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- non-empty list--&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;lignes.length!=0&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;lignes.length==0&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Liste de vos simulations</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- simulation table --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-table</span><span style="color:#000000"> </span><span style="color:#ff0000">striped</span><span style="color:#000000"> </span><span style="color:#ff0000">hover</span><span style="color:#000000"> </span><span style="color:#ff0000">responsive</span><span style="color:#000000"> </span><span style="color:#ff0000">:items</span><span style="color:#0000ff">=&quot;lignes&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:fields</span><span style="color:#0000ff">=&quot;fields&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">v-slot:cell(action)</span><span style="color:#0000ff">=&quot;row&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;link&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">@click</span><span style="color:#0000ff">=&quot;supprimerLigne(row.index)&quot;&gt;</span><span style="color:#000000">Supprimer</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-button</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-table</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// état calculé</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  computed: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    lignes() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">.$store.state.lignes;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// état interne</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  data() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      fields: [</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        { label: </span><span style="color:#a31515">&quot;#&quot;</span><span style="color:#000000">, key: </span><span style="color:#a31515">&quot;id&quot;</span><span style="color:#000000"> },</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        { label: </span><span style="color:#a31515">&quot;Marié&quot;</span><span style="color:#000000">, key: </span><span style="color:#a31515">&quot;marié&quot;</span><span style="color:#000000"> },</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        { label: </span><span style="color:#a31515">&quot;Nombre d&#x27;enfants&quot;</span><span style="color:#000000">, key: </span><span style="color:#a31515">&quot;enfants&quot;</span><span style="color:#000000"> },</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        { label: </span><span style="color:#a31515">&quot;Salaire&quot;</span><span style="color:#000000">, key: </span><span style="color:#a31515">&quot;salaire&quot;</span><span style="color:#000000"> },</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        { label: </span><span style="color:#a31515">&quot;Impôt&quot;</span><span style="color:#000000">, key: </span><span style="color:#a31515">&quot;impôt&quot;</span><span style="color:#000000"> },</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        { label: </span><span style="color:#a31515">&quot;&quot;</span><span style="color:#000000">, key: </span><span style="color:#a31515">&quot;action&quot;</span><span style="color:#000000"> }</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      ]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// méthodes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  methods: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    supprimerLigne(index) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// eslint-disable-next-line</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;Table supprimerLigne&quot;</span><span style="color:#000000">, index);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// on supprime la ligne</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">this</span><span style="color:#000000">.$store.commit(</span><span style="color:#a31515">&quot;deleteLigne&quot;</span><span style="color:#000000">, index);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// rechargement de la liste affichée</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    rechargerListe() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// eslint-disable-next-line</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;Table rechargerListe&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// on régènère la liste des simulations</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">this</span><span style="color:#000000">.$store.commit(</span><span style="color:#a31515">&quot;generateLignes&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p><strong>评论</strong></p>
+<ul>
+  <li>第 1–24 行的<b> [template]</b> 保持不变；
+  </li>
+  <li>第 30–32 行：计算属性 <b>[lignes]</b> 现在使用来自 <b>[Vuex] </b>的<b> [store]</b>；
+  </li>
+  <li>第 49–54 行：要从 HTML 表格中删除一行，我们使用 <b>[Vuex] [store] </b>的 <b>[deleteLigne]</b> 突变。我们将要删除的行的 <b>[index]</b> 编号作为参数传递（第 53 行）；
+  </li>
+  <li>第 56–61 行：为了使用新的列表重新加载 HTML 表格，我们使用 <b>[Vuex] [store] </b>的 <b>[generateLines]</b> 突变；
+  </li>
+</ul>
+<p><a id="refheadingtoc2481192728496130"></a></p>
+<h2 id="176">17.6. <span style="color: #4f81bd">结论</span></h2>
+<p><strong>[vuejs-13]</strong> 项目中的 <strong>[Vue.$session]</strong> 属性与 <strong>[vuejs-15]</strong> 项目中的 <strong>[Vue.$store]</strong> 属性非常相似。它们具有相同的功能：在视图之间共享信息。 <strong>[store]</strong> 对象的优势在于它是响应式的，而 <strong>[session]</strong> 对象则不是。不过，[vuejs-14] 项目展示了通过在视图的响应式属性中复制 [session] 对象，可以轻松使其具备响应式特性。</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        本教程由 <strong>Serge Tahé</strong> 编写，根据
+<em>知识共享 署名-非商业性使用-
+相同方式共享 3.0 未移植</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
