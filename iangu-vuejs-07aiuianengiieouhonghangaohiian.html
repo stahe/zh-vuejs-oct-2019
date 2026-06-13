@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/zh-vuejs-oct-2019/iangu-vuejs-09hiong-eventbus-haian.html">
+        <link rel="canonical" href="https://stahe.github.io/zh-vuejs-oct-2019/iangu-vuejs-07aiuianengiieouhonghangaohiian.html">
       
       
-        <link rel="prev" href="iangu-vuejs-08uuianengiuuanehiianuianhenginghoui.html">
+        <link rel="prev" href="iangu-vuejs-06hionghaaouuhiu.html">
       
       
-        <link rel="next" href="iangu-vuejs-10dao-haianiu-http-ingiu.html">
+        <link rel="next" href="iangu-vuejs-08uuianengiieouuuanehiianuianhenginghoui.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>11. 项目 [vuejs-09]：使用 [eventBus] 插件 - 通过示例了解 Vue.js 框架</title>
+        <title>9. 项目 [vuejs-07]：在组件层次结构中上报事件 - 通过示例了解 Vue.js 框架</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#11-vuejs-09-eventbus" class="md-skip">
+        <a href="#9-vuejs-07" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              11. 项目 [vuejs-09]：使用 [eventBus] 插件
+              9. 项目 [vuejs-07]：在组件层次结构中上报事件
             
           </span>
         </div>
@@ -303,14 +305,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-uangiauen.html" class="md-nav__link">
+      <a href="vuejsuangiaianie.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. VUE.JS 框架入门
+    1. VUE.JS框架简介
   
 
     
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="huangianonguouaning.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    2. 创建工作环境
   
 
     
@@ -357,14 +359,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-01ihuian.html" class="md-nav__link">
+      <a href="iangu-vuejs-01ihuhihi.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. 项目 [vuejs-01]：基础篇
+    3. 项目 [vuejs-01]：基础知识
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-02hiong-bootstrap-css-uangia.html" class="md-nav__link">
+      <a href="iangu-vuejs-02hiong-bootstrap-uangia.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 项目 [vuejs-02]：使用 Bootstrap CSS 框架
+    4. 项目 [vuejs-02]：使用 Bootstrap 框架
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-03hiianhui.html" class="md-nav__link">
+      <a href="iangu-vuejs-03hiianuani.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. 项目 [vuejs-03]：事件处理
+    5. 项目 [vuejs-03]：事件管理
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-04hiing-v-model-v-bindiuanhuingiaoanhuu.html" class="md-nav__link">
+      <a href="iangu-vuejs-04hiing-v-model-v-bindiuanhuinghuuiaoan.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、表单输入
+    6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、输入表单
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-05-ianguv-for-hiing.html" class="md-nav__link">
+      <a href="iangu-vuejs-05hiing-v-for.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. [vuejs-05] 项目：[v-for] 指令
+    7. 项目 [vuejs-05]：指令 [v-for]
   
 
     
@@ -516,60 +518,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="iangu-vuejs-07uianengihongehiianhuano.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    9. 项目 [vuejs-07]：组件层级中的事件传播
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="iangu-vuejs-08uuianengiuuanehiianuianhenginghoui.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    10. 项目 [vuejs-08]：与组件层级无关的事件，组件生命周期
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -589,7 +537,7 @@
   <span class="md-ellipsis">
     
   
-    11. 项目 [vuejs-09]：使用 [eventBus] 插件
+    9. 项目 [vuejs-07]：在组件层次结构中上报事件
   
 
     
@@ -600,14 +548,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="iangu-vuejs-09hiong-eventbus-haian.html" class="md-nav__link md-nav__link--active">
+      <a href="iangu-vuejs-07aiuianengiieouhonghangaohiian.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. 项目 [vuejs-09]：使用 [eventBus] 插件
+    9. 项目 [vuejs-07]：在组件层次结构中上报事件
   
 
     
@@ -633,10 +581,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#111-pluginsevent-bus" class="md-nav__link">
+  <a href="#91-mainjs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.1. [./plugins/event-bus] 插件
+        9.1. 主脚本 [main.js]
       
     </span>
   </a>
@@ -644,10 +592,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#112-mainjs" class="md-nav__link">
+  <a href="#92-app" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.2. 主脚本 [main.js]
+        9.2. 主组件 [App]
       
     </span>
   </a>
@@ -655,10 +603,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#113-app" class="md-nav__link">
+  <a href="#93-component11" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.3. 主视图 [App]
+        9.3. 组件 [Component11]
       
     </span>
   </a>
@@ -666,10 +614,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#114-component1" class="md-nav__link">
+  <a href="#94-component1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.4. [Component1] 组件
+        9.4. 组件 [Component1]
       
     </span>
   </a>
@@ -677,32 +625,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#115-component2" class="md-nav__link">
+  <a href="#95" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.5. [Component2] 组件
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#116-component3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        11.6. 组件 [Component3]
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#117" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        11.7. 运行项目
+        9.5. 项目执行
       
     </span>
   </a>
@@ -724,14 +650,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-10dao-haianiu-http-ingiu.html" class="md-nav__link">
+      <a href="iangu-vuejs-08uuianengiieouuuanehiianuianhenginghoui.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. 项目 [vuejs-10]：[dao] 插件，异步 HTTP 请求
+    10. 项目 [vuejs-08]：与组件层次结构无关的事件、组件生命周期
   
 
     
@@ -751,14 +677,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-11-ianguuouuaoang.html" class="md-nav__link">
+      <a href="iangu-vuejs-09hionghaian-eventbus.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. [vuejs-11] 项目：路由与导航
+    11. 项目 [vuejs-09]：使用插件 [eventBus]
   
 
     
@@ -778,14 +704,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-12html-iaoeuani.html" class="md-nav__link">
+      <a href="iangu-vuejs-10haian-daoiuingiu-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 项目 [vuejs-12]：HTML 表格管理
+    12. 项目 [vuejs-10]：插件 [dao]，异步请求 HTTP
   
 
     
@@ -805,14 +731,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-13hionguiuaenginuian.html" class="md-nav__link">
+      <a href="iangu-vuejs-11uouuaoang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. 项目 [vuejs-13]：使用会话更新组件
+    13. 项目 [vuejs-11]：路由与导航
   
 
     
@@ -832,14 +758,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-14hiuiuauiiangueiianginghieing.html" class="md-nav__link">
+      <a href="iangu-vuejs-12uaniiao-html.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. 项目 [vuejs-14]：使会话对象具备响应式特性
+    14. 项目 [vuejs-12]：管理表 HTML
   
 
     
@@ -859,14 +785,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-15hiong-vuex-haian.html" class="md-nav__link">
+      <a href="iangu-vuejs-13uianenginhionguiua.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. 项目 [vuejs-15]：使用 [Vuex] 插件
+    15. 项目 [vuejs-13]：组件更新，使用会话
   
 
     
@@ -886,14 +812,14 @@
   
   
     <li class="md-nav__item">
-      <a href="huieiiuanuuie-vuejs-euuan.html" class="md-nav__link">
+      <a href="iangu-vuejs-14hiuiuauouianginging.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    18. 税费计算服务器的 Vue.js 客户端
+    16. 项目 [vuejs-14]：使会话具有响应性
   
 
     
@@ -913,14 +839,68 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-euuanaiin.html" class="md-nav__link">
+      <a href="iangu-vuejs-15hionghaian-vuex.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    19. Vue.js 客户端改进
+    17. 项目 [vuejs-15]：使用插件 [Vuex]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="huiuiuanuuieeuuan-vuejs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. 税务计算服务器的客户端 Vue.js
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vuejseuuaneaiin.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. Vue.js客户端的改进
   
 
     
@@ -977,99 +957,90 @@
 
 
 
-<p><a id="refheadingtoc2480332728496130"></a></p>
-<h1 id="11-vuejs-09-eventbus">11. <span style="color: #365f91"><strong>项目</strong> [vuejs-09]<strong>：使用</strong> [eventBus] <strong>插件</strong></span></h1>
-<p><strong>[vuejs-09]</strong> 项目与 <strong>[vuejs-08]</strong> 项目完全相同，唯一的区别在于它引入了插件的概念。该项目的目录结构如下：</p>
-<p><img src="images/10000000000001650000021767474659.png" width="125" height="188" style="width:3.313cm;height:4.965cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001650000021767474659.png" /></p>
-<p><a id="refheadingtoc2480352728496130"></a></p>
-<h2 id="111-pluginsevent-bus">11.1. <span style="color: #4f81bd">[./plugins/event-bus] 插件</span></h2>
-<p>脚本 <strong>[./event-bus.js]</strong> 与前一个示例中的内容保持一致：</p>
+<p><span id="refheadingtoc2480052728496130" name="refheadingtoc2480052728496130" class="odt-bookmark-anchor"></span></p>
+<h1 id="9-vuejs-07">9. <span style="color: #365f91"><strong>项目</strong> [vuejs-07]<strong>：在组件层次结构中上报事件</strong></span></h1>
+<p>项目树结构如下：</p>
+<p><img src="images/10000000000001510000015761274704.png" width="118" height="120" style="width:3.12cm;height:3.18cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001510000015761274704.png" /></p>
+<p><span id="refheadingtoc2480072728496130" name="refheadingtoc2480072728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="91-mainjs">9.1. <span style="color: #4f81bd"><strong>主脚本</strong> [main.js]</span></h2>
+<p>主脚本 <strong>[main.js]</strong> 保持不变。</p>
+<p><span id="refheadingtoc2480092728496130" name="refheadingtoc2480092728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="92-app">9.2. <span style="color: #4f81bd"><strong>主组件</strong> [App]</span></h2>
+<p>组件 <strong>[App]</strong> 的代码如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Vue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;vue&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> eventBus = </span><span style="color:#0000ff">new</span><span style="color:#000000"> Vue();</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> eventBus;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#000000"> </span><span style="color:#ff0000">class</span><span style="color:#0000ff">=&quot;container&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;success&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">[vuejs-07]</span><span style="color:#000000"> : remontée d&#x27;événements dans la hiérarchie des composants</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Component1</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Component1 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./components/Component1&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    components: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      Component1</span><span style="color:#000000"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><strong>[./plugins/event-bus.js]</strong> 插件内容如下：</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  install(Vue, eventBus) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ajoute une propriété [$eventBus] à la classe Vue</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    Object.defineProperty(Vue.prototype, </span><span style="color:#a31515">&#x27;$eventBus&#x27;</span><span style="color:#000000">, {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// lorsque Vue.$eventBus est référencé, on rend le 2ième paramètre [eventBus]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      get: () =&gt; eventBus,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    })</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<p>组件 <strong>[App]</strong> 使用了新组件 <strong>[Component1]</strong>（第 7、13、17 行）。</p>
+<p><span id="refheadingtoc2480112728496130" name="refheadingtoc2480112728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="93-component11">9.3. <span style="color: #4f81bd"><strong>组件</strong> [Component11]</span></h2>
+<p>组件 <strong>[Component11]</strong> 的代码如下：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">@click</span><span style="color:#0000ff">=&quot;createEvent&quot;&gt;</span><span style="color:#000000">Créer un événement</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-button</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- 脚本 --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;component11&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 组件方法</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    methods: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 管理按钮上的 [click] 事件</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      createEvent() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 触发与数据关联的事件</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.$emit(</span><span style="color:#a31515">&quot;someEvent&quot;</span><span style="color:#000000">, { x: 2, y: 4 })</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><strong>评论</strong></p>
+<p><strong>注释</strong></p>
 <ul>
-  <li>一个 <b>[Vue]</b> 插件是一个带有 <b>[install]</b> 函数的对象（第 2 行）。当代码声明使用该插件时，该函数会被自动调用；
+  <li>第 1-3 行：<b>[Component11]</b> 组件仅包含一个可点击的按钮。点击该按钮时，将执行第 11-14 行中的 <b>[createEvent]</b> 方法；
   </li>
-  <li>第 1–9 行：脚本导出的对象；
-  </li>
-  <li>第 2 行：此处的 <b>[install]</b> 函数接受两个参数：
+  <li>第 13 行：每个 <b>[Vue]</b> 实例都拥有一个 <b>[$emit]</b> 方法，用于触发事件：
     <ul>
-      <li><b>[Vue]</b>：由 <b>[import Vue from ‘Vue’]</b> 语句获取的函数。可视为一个类；
+      <li>第一个参数是触发的事件名称；
       </li>
-      <li><b>[eventBus]</b>：由 <b>[./event-bus]</b> 脚本导出的对象；
+      <li>第二个参数是希望与该事件关联的数据；
+      </li>
+      <li>触发的事件会沿 <b>[Component11]</b> 组件的父级层次结构向上传播。该事件将沿层次结构向上传播，直至找到一个能够处理该事件的组件。此向上传播过程始于 <b>[Component11]</b> 的父组件；
       </li>
     </ul>
   </li>
-  <li>第 4–7 行：通过向 <b>[Vue]</b> 函数添加 <b>[$eventBus]</b> 属性来修改其定义（即原型）。若<b>以 [class] 的概念来</b>理解，相当于向 <b>[Vue]</b> 类添加了 <b>[$eventBus]</b> 属性。因此，作为 <b>[Vue]</b> 实例的组件将能够访问此新属性；
-  </li>
-  <li>第 6 行表明，当我们引用 <b>[Vue].$eventBus</b> 属性时，将获取第 2 行中的 <b>[eventBus]</b> 参数。稍后我们将看到，这个第二个参数就是由 <b>[./event-bus.js]</b> 脚本导出的 <b>[eventBus]</b> 对象。 因此，最终当组件 C 使用表达式 <b>[C.$eventBus]</b> 时，它将引用由 <b>[./event-bus.js]</b> 脚本导出的 <b>[eventBus]</b> 对象。 这将使其无需导入 <b>[./event-bus.js]</b> 脚本。这就是该插件的意义所在：简化对 <b>[./event-bus.js]</b> 脚本导出的 <b>[eventBus]</b> 对象的访问；
-  </li>
-  <li>请注意，该插件本身并不一定非要命名为 <b>[event-bus.js]</b>。例如，它也可以命名为 <b>[plugin-event-bus]</b>；
-  </li>
-  <li>另请注意，<b>[$eventBus]</b> 中的 $ 是一种约定，用于标识通过插件添加的 <b>[Vue]</b> 属性。您无需遵循此约定。但在本文中，我们将遵循该约定；
-  </li>
 </ul>
-<p><a id="refheadingtoc2480372728496130"></a></p>
-<h2 id="112-mainjs">11.2. <span style="color: #4f81bd"><strong>主脚本</strong> [main.js]</span></h2>
-<p>脚本 <strong>[./plugins/event-bus.js]</strong> 定义了一个针对 <strong>[Vue.js]</strong> 框架的插件。该插件目前尚未被使用，仅处于定义状态。是 <strong>[main.js]</strong> 脚本将其激活：</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Vue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;vue&#x27;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> App </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./App.vue&#x27;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// plugins</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> BootstrapVue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap-vue&#x27;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">Vue.use(BootstrapVue);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// bootstrap</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap/dist/css/bootstrap.css&#x27;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap-vue/dist/bootstrap-vue.css&#x27;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// eventbus</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> eventBus </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./event-bus&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> PluginEventBus </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./plugins/event-bus&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">Vue.use(PluginEventBus, eventBus);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// configuration</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Vue.config.productionTip = </span><span style="color:#0000ff">false</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// instanciation projet [App]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">new</span><span style="color:#000000"> Vue({</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  render: h =&gt; h(App),</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}).$mount(</span><span style="color:#a31515">&#x27;#app&#x27;</span><span style="color:#000000">)</span></span></span>
-</code></pre></div>
 
-<p><strong>评论</strong></p>
-<ul>
-  <li>第 14–16 行启用了 <b>[PluginEventBus]</b> 插件。在第 16 行之后，所有 <b>[Vue]</b> 类（函数）的实例都将拥有 <b>[$eventBus]</b> 属性，该属性指向由 <b>[./event-bus.js]</b> 脚本导出的同一对象。项目中的每个组件都会如此；
-  </li>
-</ul>
-<p><a id="refheadingtoc2480392728496130"></a></p>
-<h2 id="113-app">11.3. <span style="color: #4f81bd"><strong>主视图</strong> [App]</span></h2>
-<p>主视图 <strong>[App]</strong> 与上一个项目中的保持一致。</p>
-<p><a id="refheadingtoc2480412728496130"></a></p>
-<h2 id="114-component1">11.4. <span style="color: #4f81bd">[Component1] <strong>组件</strong></span></h2>
-<p><strong>[Component1]</strong> 组件现在使用其 <strong>[$eventBus]</strong> 属性来监听 <strong>[someEvent]</strong> 事件：</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<p><span id="refheadingtoc2480132728496130" name="refheadingtoc2480132728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="94-component1">9.4. <span style="color: #4f81bd"><strong>组件</strong> [Component1]</span></h2>
+<p><strong>[Component1]</strong> 组件的代码如下：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- 触发事件的组件 --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;2&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Component11</span><span style="color:#000000"> </span><span style="color:#ff0000">@someEvent</span><span style="color:#0000ff">=&quot;doSomething&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- 事件处理方法显示的消息--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">               </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;</span></span></span>
@@ -1077,75 +1048,53 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Component11 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./Component11&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;component1&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// component status</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 组件</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    components: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      Component11</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 组件状态</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    data() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        data: </span><span style="color:#a31515">&quot;&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        showMsg: </span><span style="color:#0000ff">false</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      };</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// event management methods</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 事件处理方法</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    methods: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// evt management [someEvent]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      doSomething(data) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// data 是与事件 [someEvent] 关联的对象</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.data = data;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 显示警报</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.showMsg = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// component lifecycle management</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// évt [created] - the component has been created</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    created() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// listen to event [someEvent]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">this</span><span style="color:#000000">.$eventBus.$on(</span><span style="color:#a31515">&quot;someEvent&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">this</span><span style="color:#000000">.doSomething);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><strong>评论</strong></p>
+<p><strong>视觉呈现</strong></p>
+<p><img src="images/10000000000008BD000001F6420B747E.png" width="559" height="125" style="width:14.803cm;height:3.32cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008BD000001F6420B747E.png" /></p>
+<p><img src="images/10000000000007AA000001F7AAB0105E.png" width="491" height="126" style="width:12.98cm;height:3.33cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007AA000001F7AAB0105E.png" /></p>
+<p><strong>注释</strong></p>
 <ul>
-  <li>第 33 行，使用了组件的 <b>[this.$eventBus]</b> 属性。另请注意，第 11 行的脚本不再导入 <b>[./event-bus.js]</b> 脚本；
+  <li>第5行：<b>[Component1]是[Component11]的</b>父组件，因此可以“监听”（这是专业术语）该组件发出的事件。已知该组件可发出<b>事件[someEvent]</b>。 属性 <b>[@someEvent=&quot;doSomething&quot;]</b> 表示：如果由 <b>[Component11]</b> 发出的事件 <b>[someEvent]</b> 发生，则必须执行第 33 行中的方法 <b>[doSomething]</b>；
+  </li>
+  <li>第 9-11 行：由方法 <b>[doSomething]</b> 显示的一条消息。 其显示由第28行的布尔值<b>[showMsg]</b>控制。该警报显示第27行的属性<b>[data]</b>；
+  </li>
+  <li>第33行：当第5行的<b>事件</b>[someEvent]发生时，<b>方法[doSomething]</b>会被调用，并接收与该事件关联<b>的数据[data]</b>作为参数。 该参数被赋值给第27行的<b>[data]</b>属性，并由第11行显示；
+  </li>
+  <li>第 37 行：将属性 <b>[showMsg]</b> 设置为 <b>[true]</b>，以显示第 9-11 行的警报；
   </li>
 </ul>
-<p><a id="refheadingtoc2480432728496130"></a></p>
-<h2 id="115-component2">11.5. <span style="color: #4f81bd">[Component2] <strong>组件</strong></span></h2>
-<p><strong>[Component2]</strong> 组件现在使用其 <strong>[$eventBus]</strong> 属性来触发 <strong>[someEvent]</strong> 事件：</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">@click</span><span style="color:#0000ff">=&quot;createEvent&quot;&gt;</span><span style="color:#000000">Créer un événement</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-button</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- script --&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;component2&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// méthodes de gestion des évts</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    methods: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      createEvent() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.$eventBus.$emit(</span><span style="color:#a31515">&quot;someEvent&quot;</span><span style="color:#000000">, { x: 2, y: 4 })</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
-</code></pre></div>
 
-<p><strong>评论</strong></p>
-<ul>
-  <li>第 13 行：使用了组件的 <b>[this.$eventBus]</b> 属性。另请注意，第 7 行的脚本不再导入 <b>[./event-bus.js]</b> 脚本；
-  </li>
-</ul>
-<p><a id="refheadingtoc2480452728496130"></a></p>
-<h2 id="116-component3">11.6. <span style="color: #4f81bd">组件 [Component3]</span></h2>
-<p><strong>[Component3]</strong> 组件的代码与 <strong>[Component1]</strong> 相同。它同样监听 <strong>[someEvent]</strong> 事件。</p>
-<p><a id="refheadingtoc2480472728496130"></a></p>
-<h2 id="117">11.7. <span style="color: #4f81bd"><strong><span style="color: #4f81bd">运行项目</span></strong></span></h2>
-<p><img src="images/10000000000006FC0000023FBFF22C19.png" width="536" height="172" style="width:14.19cm;height:4.563cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006FC0000023FBFF22C19.png" /></p>
-<p>我们得到了与上一个项目相同的结果。</p>
+<p><span id="refheadingtoc2480152728496130" name="refheadingtoc2480152728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="95">9.5. <span style="color: #4f81bd">项目执行</span></h2>
+<p><img src="images/100000000000070F00000202C3A97AFF.png" width="542" height="154" style="width:14.34cm;height:4.082cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000070F00000202C3A97AFF.png" /></p>
 
 
 

@@ -12,10 +12,10 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/zh-vuejs-oct-2019/vuejs-05-ianguv-for-hiing.html">
+        <link rel="canonical" href="https://stahe.github.io/zh-vuejs-oct-2019/iangu-vuejs-05hiing-v-for.html">
       
       
-        <link rel="prev" href="iangu-vuejs-04hiing-v-model-v-bindiuanhuingiaoanhuu.html">
+        <link rel="prev" href="iangu-vuejs-04hiing-v-model-v-bindiuanhuinghuuiaoan.html">
       
       
         <link rel="next" href="iangu-vuejs-06hionghaaouuhiu.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>7. [vuejs-05] 项目：[v-for] 指令 - 通过示例了解 Vue.js 框架</title>
+        <title>7. 项目 [vuejs-05]：指令 [v-for] - 通过示例了解 Vue.js 框架</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7. [vuejs-05] 项目：[v-for] 指令
+              7. 项目 [vuejs-05]：指令 [v-for]
             
           </span>
         </div>
@@ -303,14 +305,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-uangiauen.html" class="md-nav__link">
+      <a href="vuejsuangiaianie.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. VUE.JS 框架入门
+    1. VUE.JS框架简介
   
 
     
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="huangianonguouaning.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    2. 创建工作环境
   
 
     
@@ -357,14 +359,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-01ihuian.html" class="md-nav__link">
+      <a href="iangu-vuejs-01ihuhihi.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. 项目 [vuejs-01]：基础篇
+    3. 项目 [vuejs-01]：基础知识
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-02hiong-bootstrap-css-uangia.html" class="md-nav__link">
+      <a href="iangu-vuejs-02hiong-bootstrap-uangia.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 项目 [vuejs-02]：使用 Bootstrap CSS 框架
+    4. 项目 [vuejs-02]：使用 Bootstrap 框架
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-03hiianhui.html" class="md-nav__link">
+      <a href="iangu-vuejs-03hiianuani.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. 项目 [vuejs-03]：事件处理
+    5. 项目 [vuejs-03]：事件管理
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-04hiing-v-model-v-bindiuanhuingiaoanhuu.html" class="md-nav__link">
+      <a href="iangu-vuejs-04hiing-v-model-v-bindiuanhuinghuuiaoan.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、表单输入
+    6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、输入表单
   
 
     
@@ -481,7 +483,7 @@
   <span class="md-ellipsis">
     
   
-    7. [vuejs-05] 项目：[v-for] 指令
+    7. 项目 [vuejs-05]：指令 [v-for]
   
 
     
@@ -492,14 +494,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="vuejs-05-ianguv-for-hiing.html" class="md-nav__link md-nav__link--active">
+      <a href="iangu-vuejs-05hiing-v-for.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. [vuejs-05] 项目：[v-for] 指令
+    7. 项目 [vuejs-05]：指令 [v-for]
   
 
     
@@ -550,7 +552,7 @@
   <a href="#73-vfor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.3. [VFor] 组件
+        7.3. 组件 [VFor]
       
     </span>
   </a>
@@ -561,7 +563,7 @@
   <a href="#74" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.4. 运行项目
+        7.4. 项目执行
       
     </span>
   </a>
@@ -610,14 +612,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-07uianengihongehiianhuano.html" class="md-nav__link">
+      <a href="iangu-vuejs-07aiuianengiieouhonghangaohiian.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. 项目 [vuejs-07]：组件层级中的事件传播
+    9. 项目 [vuejs-07]：在组件层次结构中上报事件
   
 
     
@@ -637,14 +639,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-08uuianengiuuanehiianuianhenginghoui.html" class="md-nav__link">
+      <a href="iangu-vuejs-08uuianengiieouuuanehiianuianhenginghoui.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. 项目 [vuejs-08]：与组件层级无关的事件，组件生命周期
+    10. 项目 [vuejs-08]：与组件层次结构无关的事件、组件生命周期
   
 
     
@@ -664,14 +666,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-09hiong-eventbus-haian.html" class="md-nav__link">
+      <a href="iangu-vuejs-09hionghaian-eventbus.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. 项目 [vuejs-09]：使用 [eventBus] 插件
+    11. 项目 [vuejs-09]：使用插件 [eventBus]
   
 
     
@@ -691,14 +693,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-10dao-haianiu-http-ingiu.html" class="md-nav__link">
+      <a href="iangu-vuejs-10haian-daoiuingiu-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. 项目 [vuejs-10]：[dao] 插件，异步 HTTP 请求
+    12. 项目 [vuejs-10]：插件 [dao]，异步请求 HTTP
   
 
     
@@ -718,14 +720,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-11-ianguuouuaoang.html" class="md-nav__link">
+      <a href="iangu-vuejs-11uouuaoang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. [vuejs-11] 项目：路由与导航
+    13. 项目 [vuejs-11]：路由与导航
   
 
     
@@ -745,14 +747,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-12html-iaoeuani.html" class="md-nav__link">
+      <a href="iangu-vuejs-12uaniiao-html.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 项目 [vuejs-12]：HTML 表格管理
+    14. 项目 [vuejs-12]：管理表 HTML
   
 
     
@@ -772,14 +774,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-13hionguiuaenginuian.html" class="md-nav__link">
+      <a href="iangu-vuejs-13uianenginhionguiua.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. 项目 [vuejs-13]：使用会话更新组件
+    15. 项目 [vuejs-13]：组件更新，使用会话
   
 
     
@@ -799,14 +801,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-14hiuiuauiiangueiianginghieing.html" class="md-nav__link">
+      <a href="iangu-vuejs-14hiuiuauouianginging.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. 项目 [vuejs-14]：使会话对象具备响应式特性
+    16. 项目 [vuejs-14]：使会话具有响应性
   
 
     
@@ -826,14 +828,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-15hiong-vuex-haian.html" class="md-nav__link">
+      <a href="iangu-vuejs-15hionghaian-vuex.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. 项目 [vuejs-15]：使用 [Vuex] 插件
+    17. 项目 [vuejs-15]：使用插件 [Vuex]
   
 
     
@@ -853,14 +855,14 @@
   
   
     <li class="md-nav__item">
-      <a href="huieiiuanuuie-vuejs-euuan.html" class="md-nav__link">
+      <a href="huiuiuanuuieeuuan-vuejs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    18. 税费计算服务器的 Vue.js 客户端
+    18. 税务计算服务器的客户端 Vue.js
   
 
     
@@ -880,14 +882,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-euuanaiin.html" class="md-nav__link">
+      <a href="vuejseuuaneaiin.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    19. Vue.js 客户端改进
+    19. Vue.js客户端的改进
   
 
     
@@ -944,16 +946,16 @@
 
 
 
-<p><a id="refheadingtoc2479832728496130"></a></p>
-<h1 id="7-vuejs-05-v-for">7. <span style="color: #365f91">[vuejs-05] <strong>项目：</strong>[v-for] <strong>指令</strong></span></h1>
-<p><strong>[vuejs-05]</strong> 项目介绍了 <strong>[v-for]</strong> 指令：</p>
+<p><span id="refheadingtoc2479832728496130" name="refheadingtoc2479832728496130" class="odt-bookmark-anchor"></span></p>
+<h1 id="7-vuejs-05-v-for">7. <span style="color: #365f91"><strong>项目</strong> [vuejs-05]<strong>：指令</strong> [v-for]</span></h1>
+<p>项目 <strong>[vuejs-05]</strong> 包含指令 <strong>[v-for]</strong>：</p>
 <p><img src="images/100000000000010C00000143B6F6D834.png" width="94" height="113" style="width:2.482cm;height:2.992cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000010C00000143B6F6D834.png" /></p>
-<p><a id="refheadingtoc2479852728496130"></a></p>
+<p><span id="refheadingtoc2479852728496130" name="refheadingtoc2479852728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="71-mainjs">7.1. <span style="color: #4f81bd"><strong>主脚本</strong> [main.js]</span></h2>
-<p>主脚本 <strong>[main.js]</strong> 的代码与前几个项目中的 <strong>[main.js]</strong> 脚本完全相同。</p>
-<p><a id="refheadingtoc2479872728496130"></a></p>
+<p>主脚本 <strong>[main.js]</strong> 的代码与先前项目中的脚本 <strong>[main.js]</strong> 完全相同。</p>
+<p><span id="refheadingtoc2479872728496130" name="refheadingtoc2479872728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="72-app">7.2. <span style="color: #4f81bd"><strong>主组件</strong> [App]</span></h2>
-<p><strong>[App]</strong> 组件的代码如下：</p>
+<p>组件 <strong>[App]</strong> 的代码如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-container</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -965,11 +967,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-container</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> VFor </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./components/VFor.vue&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    components: {</span></span>
@@ -980,30 +982,31 @@
 </code></pre></div>
 
 <ul>
-  <li>第 7、14、19 行：<b>[App]</b> 组件使用了 <b>[VFor]</b> 组件；
+  <li>第 7、14、19 行：组件 <b>[App]</b> 调用组件 <b>[VFor]</b>；
   </li>
 </ul>
-<p><a id="refheadingtoc2479892728496130"></a></p>
-<h2 id="73-vfor">7.3. <span style="color: #4f81bd">[VFor] <strong>组件</strong></span></h2>
-<p>视觉输出效果如下：</p>
-<p><img src="images/100000000000059C00000285C7E668AF.png" width="359" height="161" style="width:9.5cm;height:4.267cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000059C00000285C7E668AF.png" /></p>
+
+<p><span id="refheadingtoc2479892728496130" name="refheadingtoc2479892728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="73-vfor">7.3. <span style="color: #4f81bd"><strong>组件</strong> [VFor]</span></h2>
+<p>视觉呈现效果如下：</p>
+<p><img src="images/100000000000059C00000285C7E668AF.png" width="359" height="161" style="width:9.5cm;height:4.27cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000059C00000285C7E668AF.png" /></p>
 <p><img src="images/1000000000000569000003298849A835.png" width="346" height="202" style="width:9.162cm;height:5.352cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000569000003298849A835.png" /></p>
-<p><strong>[VFor]</strong> 组件的代码如下：</p>
+<p>组件 <strong>[VFor]</strong> 的代码如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- a drop-down list --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- 下拉列表 --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-dropdown</span><span style="color:#000000"> </span><span style="color:#ff0000">id</span><span style="color:#0000ff">=&quot;dropdown&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">text</span><span style="color:#0000ff">=&quot;Options&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-dropdown-item</span><span style="color:#000000"> </span><span style="color:#ff0000">v-for</span><span style="color:#0000ff">=&quot;(option,index) in options&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                       </span><span style="color:#ff0000">:key</span><span style="color:#0000ff">=&quot;option.id&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                       </span><span style="color:#ff0000">@click</span><span style="color:#0000ff">=&quot;select(index)&quot;&gt;</span><span style="font-weight:bold;color:#000000">{{</span><span style="color:#800080">option.text</span><span style="font-weight:bold;color:#000000">}}</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-dropdown-item</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-dropdown</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- button --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- 按钮 --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">class</span><span style="color:#0000ff">=&quot;ml-3&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">              </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">              </span><span style="color:#ff0000">@click</span><span style="color:#0000ff">=&quot;generateErrors&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">              </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;!error&quot;&gt;</span><span style="color:#000000">Générer une liste d&#x27;erreurs</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-button</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- alert --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- 提示 --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;danger&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;error&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">class</span><span style="color:#0000ff">=&quot;mt-3&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      Les erreurs suivantes se sont produites :</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">br</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
@@ -1013,19 +1016,19 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- script --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- 脚本 --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;VFor&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// propriétés statiques du composant</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 组件的静态属性</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    data() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// liste des erreurs</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 错误列表</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        erreurs: [],</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// erreur ou pas</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 是否出错</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        error: </span><span style="color:#0000ff">false</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// liste des options du menu</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 菜单选项列表</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        options: [</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          { text: </span><span style="color:#a31515">&quot;option 1&quot;</span><span style="color:#000000">, id: 1 },</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          { text: </span><span style="color:#a31515">&quot;option 2&quot;</span><span style="color:#000000">, id: 2 },</span></span></span>
@@ -1033,15 +1036,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        ]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      };</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// méthodes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 方法</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    methods: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// génération d&#x27;une liste d&#x27;erreurs</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 生成错误列表</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      generateErrors() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.erreurs = </span><span style="font-weight:bold;color:#000000">[&quot;erreur 1&quot;, &quot;erreur 2&quot;, &quot;erreur 3&quot;]</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.error = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// l&#x27;utilisateur a sélectionné une option</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 用户已选择一个选项</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      select(index) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        alert(</span><span style="color:#a31515">&quot;Vous avez choisi : &quot;</span><span style="color:#000000"> + </span><span style="color:#0000ff">this</span><span style="color:#000000">.options</span><span style="font-weight:bold;color:#000000">[index]</span><span style="color:#000000">.text);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
@@ -1050,40 +1053,41 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><strong>评论</strong></p>
+<p><strong>注释</strong></p>
 <ul>
-  <li>第 4 行：&lt;b-dropdown&gt; 标签用于定义一个下拉列表 <b>[1]</b>，其形式为一个按钮，点击该按钮即可查看列表选项 <b>[2]</b>。<b>[text=&#x27;Options&#x27;]</b> 定义了按钮上显示的文本 <b>[1]</b>；
+  <li>第 4 行：&lt;b-dropdown&gt; 标签用于定义一个下拉列表 <b>[1]</b>，其形式为一个按钮，点击该按钮即可查看列表 <b>[2]</b> 中的选项。 <b>[text=’Options’]</b> 定义了按钮上显示的文本 <b>[1]</b>；
   </li>
-  <li>第 5–7 行：&lt;dropdown-item&gt; 标签定义下拉列表中的一个项目；
+  <li>第 5-7 行：&lt;dropdown-item&gt; 标签定义了下拉列表中的一个项目；
   </li>
-  <li>第 5 行：<b>[v-for]</b> 属性表示 &lt;dropdown-item&gt; 标签必须针对组件 <b>[options]</b> 属性（第 37–41 行）中的每个 <b>[option]</b> 元素进行重复。<b>[index]</b> 表示该元素在列表中的序号 <b>[0, 1, ..., n]</b>。<b>[option]</b> 元素的名称和索引均为任意值。 我们也可以这样写<b>：[&lt;b-dropdown-item v-for=&quot;(o,i) in options&quot; :key=&quot;o.id&quot; @click=&quot;select(i)&quot;&gt;{{o.text}}&lt;/b-dropdown-item&gt;]</b>;
+  <li>第5行：<b>属性</b>[v-for]表示，对于组件中第37至41行<b>属性[options]</b>中的每个<b>元素[option]</b>，都应重复使用&lt;dropdown-item&gt;标签。 <b>[index]</b> 代表 <b>[0, 1, ..., n]</b> 列表中该元素的序号。元素名称 <b>[option]</b> 以及索引名称均可自定义。也可以写成 <b>[&lt;b-dropdown-item v-for=&quot;(o,i) in options&quot; :key=&quot;o.id&quot; @click=&quot;select(i)&quot;&gt;{{o.text}}&lt;/b-dropdown-item&gt;]</b>；
   </li>
-  <li>第 6 行：如果省略 <b>[key]</b> 属性，ESLint 会发出警告。 <b>[key]</b> 属性的值必须始终保持一致。因此，元素的 <b>[index]</b> 值并不合适。因为如果移除此元素，列表中后续元素的 <b>[index]</b> 值将会减 1。 因此，这里我们使用 <b>[option.id]</b> 作为键值（第 38–40 行），即使移除某个元素，该值也不会改变。<b>[key]</b> 属性由 <b>[Vue.js]</b> 用于在列表需要重新渲染时优化 DOM（文档对象模型）的重新渲染。请注意 <b>[:key]</b> 这种写法，因为 <b>[key]</b> 具有动态值；
+  <li>第 6 行：如果遗漏 <b>[key]</b> 属性，ESLint 会触发警告。<b>[key]</b> 属性的值必须保持不变。  因此，该元素的值 <b>[index]</b> 也不合适。 因为如果删除该元素，列表中位于其后面的元素的 <b>[index]</b> 值将减 1。因此，这里采用 <b>[option.id]</b> 作为键值（第 38-40 行），该值在删除元素时不会改变。 属性 <b>[key] </b>是 DOM（文档对象模型）的再生优化组件，用于在列表需要再生时由 <b>[Vue.js]</b> 进行处理。 请注意 <b>[:key]</b> 的命名，因为 <b>[key]</b> 具有动态值；
   </li>
-  <li>第 7 行：当用户点击列表中的某项时，将调用第 49–51 行中的 <b>[select(index)]</b> 方法；
+  <li>第 7 行：当用户点击列表中的某个元素时，将调用 <b>[select(index)]</b> 方法（第 49-51 行）；
   </li>
-  <li>第 7 行：选项文本将取自第 37–41 行定义的<b> [option.text]</b> 值；
+  <li>第 7 行：选项的文本将采用第 37-41 行定义的值 <b>[option.text]</b>；
   </li>
-  <li>第 10 行：<b>[3]</b> 按钮。<b>[class=’ml-3’]</b> 表示左侧 (l) 留有三个间隔符的边距 (m)。<b>[@click=&quot;generateErrors&quot;]</b> 表示当<b>点击</b>该按钮时<b>，</b>将执行第 45–48 行中的 <b>[generateErrors]</b> 方法。 <b>[v-if=&quot;!error&quot;]</b> 表示按钮的显示取决于第 35 行静态 <b>[error]</b> 属性的值；
+  <li>第 10 行：按钮 <b>[3]</b>。<b>[class=’ml-3]</b> 表示左边距 (m) 为 3 个间隔符。 <b>[@click=&quot;generateErrors&quot;]</b> 表示当按钮上执行 <b>[click]</b> 时，将调用第 45-48 行中的方法 <b>[generateErrors]</b>。 <b>[v-if=&quot;!error&quot;]</b> 表示按钮的显示取决于第 35 行静态属性 <b>[error]</b> 的值；
   </li>
-  <li>第 15–21 行：一个 <b>[danger] [4]</b> 提示框，同样由第 35 行的静态 <b>[error]</b> 属性控制。<b>[class=’mt-3’]</b> 属性（顶部留白<b> 3 </b>个间隔符）设置了此提示框与其上方元素之间的间距；
+  <li>第15-21行：一个类型<b>为[danger] [4]的</b>提示，同样由第35行的静态属性<b>[error]</b>控制。 属性 <b>[class=’mt-3’]</b>（顶部间距<b> 3 </b>个间隔符）用于设定该提示与上方元素之间的间距；
   </li>
-  <li>第 27 行：HTML 标签 &lt;br /&gt; 创建换行；
+  <li>第27行：标签 HTML &lt;br /&gt; 表示换行；
   </li>
-  <li>第 18 行：无序列表 <b>[ul=unordered list] </b>的开头；
+  <li>第18行：无序列表的开始 <b>[ul=unordered list]</b>；
   </li>
-  <li>第 19 行：&lt;li&gt; 标签定义了一个列表项 &lt;ul&gt;。这里我们再次使用 <b>[v-for]</b> 指令来多次生成该标签——生成次数等于第 33 行 <b>[errors]</b> 数组中的元素个数。此处我们使用了 <b>[:key=index]</b> 属性。 我们之前提到，列表项的索引并不是区分列表项的好方法，因为如果删除一个项，所有后续项的索引都会改变。但在此处这并不重要，因为错误列表中的项不太可能被删除；
+  <li>第19行：标签 &lt;li&gt; 定义了列表 &lt;ul&gt; 中的一个元素。这里同样使用指令 <b>[v-for]</b> 来多次生成该标签。 此处的重复次数等于第33行数<b>组[erreurs]</b>中的元素个数。此处使用了<b>[:key=index]</b>属性。 此前曾提到，列表元素的索引无法有效区分列表中的不同元素，因为一旦删除某个元素，后续所有元素的索引都会发生变化。但在此处这并不重要，因为错误列表中的元素不太可能被删除；
   </li>
-  <li>第 19 行：此行用于显示 <b>[errors]</b> 列表中的 <b>[error]</b> 元素；
+  <li>第 19 行：该元素用于显示列表 <b>[erreurs]</b> 中的元素 <b>[erreur]</b>；
   </li>
-  <li>第 30–43 行：<b>[template]</b> 中的所有动态元素都是组件的属性。这里没有由父组件设置值的 <b>[props]</b> 属性；
+  <li>第 30-43 行：<b>[template]</b> 中的所有动态元素均为组件的属性。此处不存在由父组件设定值的 <b>[props]</b> 类型属性；
   </li>
-  <li>第 48–55 行：<b>[generateErrors]</b> 方法生成错误列表，该列表将由第 16–18 行的 &lt;ul&gt; 标签显示。此外，它还修改了静态 <b>[error]</b> 属性，既用于显示该错误列表（第 15 行），也用于隐藏生成按钮（第 13 行）；
+  <li>第 48-55 行：方法 <b>[generateErrors]</b> 生成错误列表，该列表将通过第 16-18 行的 &lt;ul&gt; 标签显示。 此外，该方法还修改了静态属性 [error]，既用于显示该错误列表（第 15 行），也用于隐藏生成按钮（第 13 行）；
   </li>
 </ul>
-<p><a id="refheadingtoc2479912728496130"></a></p>
-<h2 id="74">7.4. <span style="color: #4f81bd">运行项目</span></h2>
-<p><img src="images/100000000000071C0000023D32BB36D5.png" width="546" height="172" style="width:14.452cm;height:4.551cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000071C0000023D32BB36D5.png" /></p>
+
+<p><span id="refheadingtoc2479912728496130" name="refheadingtoc2479912728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="74">7.4. <span style="color: #4f81bd">项目执行</span></h2>
+<p><img src="images/100000000000071C0000023D32BB36D5.png" width="546" height="172" style="width:14.452cm;height:4.553cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000071C0000023D32BB36D5.png" /></p>
 
 
 

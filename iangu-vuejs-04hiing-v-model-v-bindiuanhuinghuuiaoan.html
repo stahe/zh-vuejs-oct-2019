@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/zh-vuejs-oct-2019/iangu-vuejs-04hiing-v-model-v-bindiuanhuingiaoanhuu.html">
+        <link rel="canonical" href="https://stahe.github.io/zh-vuejs-oct-2019/iangu-vuejs-04hiing-v-model-v-bindiuanhuinghuuiaoan.html">
       
       
-        <link rel="prev" href="iangu-vuejs-03hiianhui.html">
+        <link rel="prev" href="iangu-vuejs-03hiianuani.html">
       
       
-        <link rel="next" href="vuejs-05-ianguv-for-hiing.html">
+        <link rel="next" href="iangu-vuejs-05hiing-v-for.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、表单输入 - 通过示例了解 Vue.js 框架</title>
+        <title>6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、输入表单 - 通过示例了解 Vue.js 框架</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、表单输入
+              6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、输入表单
             
           </span>
         </div>
@@ -303,14 +305,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-uangiauen.html" class="md-nav__link">
+      <a href="vuejsuangiaianie.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. VUE.JS 框架入门
+    1. VUE.JS框架简介
   
 
     
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="huangianonguouaning.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    2. 创建工作环境
   
 
     
@@ -357,14 +359,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-01ihuian.html" class="md-nav__link">
+      <a href="iangu-vuejs-01ihuhihi.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. 项目 [vuejs-01]：基础篇
+    3. 项目 [vuejs-01]：基础知识
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-02hiong-bootstrap-css-uangia.html" class="md-nav__link">
+      <a href="iangu-vuejs-02hiong-bootstrap-uangia.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 项目 [vuejs-02]：使用 Bootstrap CSS 框架
+    4. 项目 [vuejs-02]：使用 Bootstrap 框架
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-03hiianhui.html" class="md-nav__link">
+      <a href="iangu-vuejs-03hiianuani.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. 项目 [vuejs-03]：事件处理
+    5. 项目 [vuejs-03]：事件管理
   
 
     
@@ -454,7 +456,7 @@
   <span class="md-ellipsis">
     
   
-    6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、表单输入
+    6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、输入表单
   
 
     
@@ -465,14 +467,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="iangu-vuejs-04hiing-v-model-v-bindiuanhuingiaoanhuu.html" class="md-nav__link md-nav__link--active">
+      <a href="iangu-vuejs-04hiing-v-model-v-bindiuanhuinghuuiaoan.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、表单输入
+    6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、输入表单
   
 
     
@@ -523,7 +525,7 @@
   <a href="#63-form" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.3. [Form] 组件
+        6.3. 组件 [Form]
       
     </span>
   </a>
@@ -534,7 +536,7 @@
   <a href="#64" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.4. 运行项目
+        6.4. 项目运行
       
     </span>
   </a>
@@ -556,14 +558,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-05-ianguv-for-hiing.html" class="md-nav__link">
+      <a href="iangu-vuejs-05hiing-v-for.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. [vuejs-05] 项目：[v-for] 指令
+    7. 项目 [vuejs-05]：指令 [v-for]
   
 
     
@@ -610,14 +612,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-07uianengihongehiianhuano.html" class="md-nav__link">
+      <a href="iangu-vuejs-07aiuianengiieouhonghangaohiian.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. 项目 [vuejs-07]：组件层级中的事件传播
+    9. 项目 [vuejs-07]：在组件层次结构中上报事件
   
 
     
@@ -637,14 +639,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-08uuianengiuuanehiianuianhenginghoui.html" class="md-nav__link">
+      <a href="iangu-vuejs-08uuianengiieouuuanehiianuianhenginghoui.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. 项目 [vuejs-08]：与组件层级无关的事件，组件生命周期
+    10. 项目 [vuejs-08]：与组件层次结构无关的事件、组件生命周期
   
 
     
@@ -664,14 +666,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-09hiong-eventbus-haian.html" class="md-nav__link">
+      <a href="iangu-vuejs-09hionghaian-eventbus.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. 项目 [vuejs-09]：使用 [eventBus] 插件
+    11. 项目 [vuejs-09]：使用插件 [eventBus]
   
 
     
@@ -691,14 +693,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-10dao-haianiu-http-ingiu.html" class="md-nav__link">
+      <a href="iangu-vuejs-10haian-daoiuingiu-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. 项目 [vuejs-10]：[dao] 插件，异步 HTTP 请求
+    12. 项目 [vuejs-10]：插件 [dao]，异步请求 HTTP
   
 
     
@@ -718,14 +720,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-11-ianguuouuaoang.html" class="md-nav__link">
+      <a href="iangu-vuejs-11uouuaoang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. [vuejs-11] 项目：路由与导航
+    13. 项目 [vuejs-11]：路由与导航
   
 
     
@@ -745,14 +747,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-12html-iaoeuani.html" class="md-nav__link">
+      <a href="iangu-vuejs-12uaniiao-html.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 项目 [vuejs-12]：HTML 表格管理
+    14. 项目 [vuejs-12]：管理表 HTML
   
 
     
@@ -772,14 +774,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-13hionguiuaenginuian.html" class="md-nav__link">
+      <a href="iangu-vuejs-13uianenginhionguiua.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. 项目 [vuejs-13]：使用会话更新组件
+    15. 项目 [vuejs-13]：组件更新，使用会话
   
 
     
@@ -799,14 +801,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-14hiuiuauiiangueiianginghieing.html" class="md-nav__link">
+      <a href="iangu-vuejs-14hiuiuauouianginging.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. 项目 [vuejs-14]：使会话对象具备响应式特性
+    16. 项目 [vuejs-14]：使会话具有响应性
   
 
     
@@ -826,14 +828,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-15hiong-vuex-haian.html" class="md-nav__link">
+      <a href="iangu-vuejs-15hionghaian-vuex.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. 项目 [vuejs-15]：使用 [Vuex] 插件
+    17. 项目 [vuejs-15]：使用插件 [Vuex]
   
 
     
@@ -853,14 +855,14 @@
   
   
     <li class="md-nav__item">
-      <a href="huieiiuanuuie-vuejs-euuan.html" class="md-nav__link">
+      <a href="huiuiuanuuieeuuan-vuejs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    18. 税费计算服务器的 Vue.js 客户端
+    18. 税务计算服务器的客户端 Vue.js
   
 
     
@@ -880,14 +882,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-euuanaiin.html" class="md-nav__link">
+      <a href="vuejseuuaneaiin.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    19. Vue.js 客户端改进
+    19. Vue.js客户端的改进
   
 
     
@@ -944,21 +946,21 @@
 
 
 
-<p><a id="refheadingtoc2479732728496130"></a></p>
-<h1 id="6-vuejs-04-v-model-v-bind">6. <span style="color: #365f91"><strong>项目</strong> [vuejs-04]<strong>：指令</strong> [v-model, v-bind]<strong>、计算属性、表单输入</strong></span></h1>
-<p><strong>[vuejs-04]</strong> 项目的目录结构如下：</p>
-<p><img src="images/100000000000011F000001009A483751.png" width="101" height="90" style="width:2.662cm;height:2.374cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000011F000001009A483751.png" /></p>
-<p><a id="refheadingtoc2479752728496130"></a></p>
+<p><span id="refheadingtoc2479732728496130" name="refheadingtoc2479732728496130" class="odt-bookmark-anchor"></span></p>
+<h1 id="6-vuejs-04-v-model-v-bind">6. <span style="color: #365f91"><strong>项目</strong> [vuejs-04]<strong>：指令</strong> [v-model, v-bind]<strong>、计算属性、输入表单</strong></span></h1>
+<p>项目 <strong>[vuejs-04]</strong> 的树形结构如下：</p>
+<p><img src="images/100000000000011F000001009A483751.png" width="101" height="90" style="width:2.662cm;height:2.371cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000011F000001009A483751.png" /></p>
+<p><span id="refheadingtoc2479752728496130" name="refheadingtoc2479752728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="61-mainjs">6.1. <span style="color: #4f81bd"><strong>主脚本</strong> [main.js]</span></h2>
-<p>与前面的示例相同。</p>
-<p><a id="refheadingtoc2479772728496130"></a></p>
+<p>与前一个示例中的相同。</p>
+<p><span id="refheadingtoc2479772728496130" name="refheadingtoc2479772728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="62-app">6.2. <span style="color: #4f81bd"><strong>主组件</strong> [App]</span></h2>
 <p><strong>[App.vue]</strong> 的代码如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-container</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- message de présentation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- 提示信息 --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;8&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;success&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
@@ -970,11 +972,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-container</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Form </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./components/Form.vue&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    components: {</span></span>
@@ -984,16 +986,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><strong>[App.vue]</strong> 组件使用了新的 <strong>[Form]</strong> 组件（第 12、19、24 行）。</p>
-<p><a id="refheadingtoc2479792728496130"></a></p>
-<h2 id="63-form">6.3. <span style="color: #4f81bd">[Form] <strong>组件</strong></span></h2>
-<p><strong>[Form]</strong> 组件的代码如下：</p>
+<p>组件 <strong>[App.vue]</strong> 使用了新组件 <strong>[Form]</strong>（第 12、19、24 行）。</p>
+<p><span id="refheadingtoc2479792728496130" name="refheadingtoc2479792728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="63-form">6.3. <span style="color: #4f81bd"><strong>组件</strong> [Form]</span></h2>
+<p>组件 <strong>[Form]</strong> 的代码如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- form --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- 表单 --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-form</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- form elements --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- 表单元素 --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;4&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-card</span><span style="color:#000000"> </span><span style="color:#ff0000">bg-variant</span><span style="color:#0000ff">=&quot;light&quot;&gt;</span></span></span>
@@ -1005,7 +1007,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                       </span><span style="color:#ff0000">v-bind:state</span><span style="color:#0000ff">=&quot;enfantsValide&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">              </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-form-invalid-feedback</span><span style="color:#000000"> </span><span style="color:#ff0000">:state</span><span style="color:#0000ff">=&quot;enfantsValide&quot;&gt;</span><span style="color:#000000">Vous devez saisir un nombre positif ou nul</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-form-invalid-feedback</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-form-group</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#000000">&lt;!-- button --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#000000">&lt;!-- 按钮 --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:disabled</span><span style="color:#0000ff">=&quot;formInvalide&quot; </span><span style="color:#ff0000">@click</span><span style="color:#0000ff">=&quot;doSomething&quot;&gt;</span><span style="color:#000000">Valider</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-button</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1020,35 +1022,35 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- script --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- 脚本 --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// nom</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 名称</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;Form&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// attributs statiques du composant</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 组件的静态属性</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    data() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// nbre d&#x27;enfants</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 子元素数量</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        enfants: </span><span style="color:#a31515">&quot;&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      };</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// attributs calculés</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 计算属性</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    computed: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// attribut [formInvalide]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 属性 [formInvalide]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      formInvalide() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">return</span><span style="color:#000000"> !</span><span style="color:#0000ff">this</span><span style="color:#000000">.enfantsValide;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// attribut [enfantsInvalide]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 属性 [enfantsInvalide]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      enfantsValide() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">return</span><span style="color:#000000"> Boolean(</span><span style="color:#0000ff">this</span><span style="color:#000000">.enfants.match(</span><span style="color:#a31515">/^\s*\d+\s*$/</span><span style="color:#000000">));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// méthodes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 方法</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    methods: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      doSomething() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// le nbre d&#x27;enfants est connu lorsque la validation a lieu</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 在验证时已知子节点数量</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        alert(</span><span style="color:#a31515">&quot;Nombre d&#x27;enfants : &quot;</span><span style="color:#000000"> + </span><span style="color:#0000ff">this</span><span style="color:#000000">.enfants);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1056,81 +1058,82 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><strong>可视化输出</strong></p>
-<p><img src="images/1000000000000610000003F865A73DB8.png" width="388" height="254" style="width:10.269cm;height:6.722cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000610000003F865A73DB8.png" /></p>
-<p><img src="images/100000000000080C0000037C7B1E4A86.png" width="515" height="223" style="width:13.63cm;height:5.902cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000080C0000037C7B1E4A86.png" /></p>
+<p><strong>视觉呈现</strong></p>
+<p><img src="images/1000000000000610000003F865A73DB8.png" width="388" height="254" style="width:10.269cm;height:6.72cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000610000003F865A73DB8.png" /></p>
+<p><img src="images/100000000000080C0000037C7B1E4A86.png" width="515" height="223" style="width:13.63cm;height:5.9cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000080C0000037C7B1E4A86.png" /></p>
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 4–32 行：&lt;b-form&gt; 标签引入了一个 Bootstrap 表单；
+  <li>第 4-32 行：&lt;b-form&gt; 标签引入了一个 Bootstrap 表单；
   </li>
-  <li>第 6 行：&lt;b-row&gt; 标签定义了表单中的一行；
+  <li>第 6 行：&lt;b-row&gt; 标签在表单中插入一行；
   </li>
-  <li>第 7 行：&lt;b-col cols=’4’&gt; 标签定义了一个横跨 4 个 Bootstrap 列的列；
+  <li>第 7 行：&lt;b-col cols=’4’&gt; 标签引入了一列，该列占据 4 个 Bootstrap 列宽；
   </li>
-  <li>第 8 行：&lt;b-card&gt; 标签 <b>[6]</b> 引入了一个 Bootstrap 卡片，即一个带有边框的区域；
+  <li>第8行：标签 &lt;b-card&gt; <b>[6]</b> 引入了一个Bootstrap卡片，即一个带有边框的区域；
   </li>
-  <li>第 9 行：&lt;b-form-group&gt; 标签添加了一组相互关联的表单元素。在此，一个标签（<b>[label]</b> 属性）<b>[1]</b> 与一个输入字段（<b>[label-for]</b> 属性）相关联。<b>[label-for] </b>的值即为该输入字段的 <b>[id]</b> 字段（第 12 行）的值；
+  <li>第 9 行：&lt;b-form-group&gt; 标签引入了一组相互关联的表单元素。此处，文本（属性 <b>[label]</b>）<b>[1]</b> 与一个输入框（属性 <b>[label-for]</b>）相关联。 <b>[label-for]</b> 的值即为输入框第 12 行字段 <b>[id]</b> 的值；
   </li>
-  <li>第 10–14 行：&lt;b-input&gt; 标签 <b>[2]</b> 引入了一个输入字段：
+  <li>第 10-14 行：&lt;b-input&gt; 标签 <b>[2]</b> 引入了一个输入框：
     <ul>
-      <li>第 10 行：<b>[type=&#x27;text&#x27;]</b> 表示可以在输入框中输入文本。鉴于我们预期会有多个子元素，本可以使用 <b>[type=&#x27;number&#x27;]</b> 并配合 <b>[min=&#x27;val1&#x27; max=&#x27;val2&#x27; step=&#x27;val3&#x27;]</b> 进行限制。我们使用 <b>[type=&#x27;text&#x27;] </b>是为了演示如何验证输入内容；
+      <li>第 10 行：<b>[type=’text’]</b> 表示可以在输入框中输入文本。 本可以使用 <b>[min=’val1’ max=’val2’ step=’val3’]</b> 作为约束<b>条件</b>，因为预期该区域包含多个子元素。此处采用 <b>[type=’text’] </b>是为了演示如何验证输入的有效性；
       </li>
-      <li>第 12 行：<b>[placeholder]</b> 属性 <b>[3]</b> 设置了在用户输入内容之前输入框中显示的提示信息；
+      <li>第 12 行：属性 <b>[placeholder] [3]</b> 用于在用户尚未输入内容时，在输入框中显示提示信息；
       </li>
-      <li>第 13 行：<b>[v-model]</b> 指令将输入的值与组件第 42 行的 <b>[children]</b> 属性进行<b>双向</b>绑定：
+      <li>第 13 行：指令 <b>[v-model] </b>将输入值与组件第 42 行的属性 <b>[enfants]</b> <b>建立双向</b>关联：
         <ul>
-          <li>当输入值发生变化时，<b>[children]</b> 属性的值也会随之改变；
+          <li>当输入值发生变化<b>时，[enfants]属性的</b>值也会随之变化；
           </li>
-          <li>当 <b>[children]</b> 属性的值发生变化时，输入的值也会随之变化，即 <b>[2] </b>的内容发生变化；
+          <li>当 <b>[enfants]</b> 属性的值发生变化时，输入值也会随之变化，即 <b>[2]</b> 的内容发生变化；
           </li>
-          <li>需要理解的关键点是：得益于上述机制，当用户点击 <b>[Validate]</b> 按钮 <b>[5]</b> 时，第 42 行中的 <b>[children]</b> 属性将取 <b>[2] </b>中输入的值；
+          <li>需要理解的关键点是，通过上述机制，当用户点击按钮 <b>[Valider] [5]</b> 时， 第42行的<b>[enfants]</b>属性的值即为在<b>[2]</b>中输入的值；
           </li>
         </ul>
       </li>
-      <li>第 14 行：<b>[v-bind]</b> 指令在 &lt;b-input&gt; 标签的某个属性（此处为 <b>[state]</b> 属性）与组件的某个属性（此处为第 53 行的<b> [enfantsValide]</b>）之间建立了绑定。<b>[enfantsValide]</b> 属性的独特之处在于，它是一个返回该属性值的<b>函数</b>。此类属性被称为<b>计算</b>属性。 计算属性位于组件第 47 行的 <b>[computed]</b> 属性中。计算属性的使用方式与 <b>[data]</b> 属性的静态属性相同：在第 14 行，我们不写 <b>[v-bind:state=’enfantsValide()’]</b>，而是写 <b>[v-bind:state=’enfantsValide’]</b>，<b>不带圆括号</b>。 因此，仅通过阅读 <b>[template]</b> 部分，无法区分<b>计算</b>属性与<b>静态</b>属性。要进行区分，必须查看组件的脚本代码；
+      <li>第14行：指令[v-bind]建立了一条关联，一端是&lt;b-input&gt;标签的属性（<b>此处为[state]</b>），另一端是组件的属性（<b>此处</b>为[enfantsValide]，位于第53行）。 <b>[enfantsValide]</b> 属性具有特殊性，因为它是一个返回该属性值的<b>函数</b>。此类属性被称为计算属性。计算属性位于组件的 <b>[computed]</b> 属性中（第 47 行）。 计算属性的使用方式与函数 <b>[data]</b> 中的静态属性相同：第 14 行不写 <b>[v-bind:state=’enfantsValide()’]</b>，而是<b>写 [v-bind:state=’enfantsValide’]，且不带括号</b>。 此外，仅通过阅读 <b>[template]</b> 无法区分<b>计算</b>属性与<b>静态</b>属性。为此，必须查看组件脚本的代码；
       </li>
-      <li>第 14 行：<b>[state]</b> 属性用于设置输入值的有效/无效状态：若 <b>[enfantsValide]</b> 返回 <b>[true]</b>，则输入值被视为有效；否则视为无效。上图截图展示了当 <b>[enfantsValide]</b> 函数返回 <b>[false]</b> 时 <b>[b-input]</b> 组件的状态；
+      <li>第14行：<b>属性</b>[state]将确定输入值的有效/无效状态：如果[enfantsValide]<b>返回</b>值[true]，则输入值被视为有效；否则视为无效。 上图截图展示了当函数 <b>[enfantsValide]</b> 返回值 <b>[false]</b> 时，组件 <b>[b-input]</b> 的状态；
       </li>
-      <li>第 15 行：&lt;b-form-invalid-feedback&gt; 标签 <b>[4] </b>在 <b>[2]</b> 处的输入无效时显示一条消息。其属性 <b>[:state=&#x27;childrenValid&#x27;]</b> 与第 15 行中的<b> [v-bind:state=&#x27;childrenValid&#x27;]</b> 属性完全相同。<b>[v-bind]</b> 指令可以省略，但必须保留 <b>[:]</b> 符号。 因此，当 <b>[childrenValid]</b> 属性为 <b>[false]</b> 时，将显示错误消息；
+      <li>第 15 行：当 <b>[2]</b> 中的输入无效时，&lt;b-form-invalid-feedback&gt; 标签 <b>[4]</b> 会显示一条消息。 其属性 <b>[:state=’enfantsValide’]</b> 与第 14 行的属性 <b>[v-bind:state=’enfantsValide’]</b> 相同。可以省略指令 <b>[v-bind]</b>，但必须保留符号 <b>[:]</b>。 因此，当属性 <b>[enfantsValide] </b>的值为 <b>[false]</b> 时，会显示错误信息；
       </li>
-      <li>第 16 行：&lt;b-group&gt; 元素组的结束；
+      <li>第16行：&lt;b-group&gt; 元素组的结束；
       </li>
-      <li>第 18 行：用于验证输入的 <b>[5]</b> 按钮：
+      <li>第18行：用于提交输入的按钮 <b>[5]</b>：
         <ul>
-          <li>该按钮将显示为蓝色 <b>[variant=&#x27;primary&#x27;]</b>；
+          <li>该按钮将显示为蓝色 <b>[variant=’primary’]</b>；
           </li>
-          <li><b>[:disabled=&quot;formInvalide&quot;]</b>: <b>[disabled]</b> 属性用于启用或禁用该按钮。该属性通过 v-bind 绑定至第 49 行的计算属性 <b>[formInvalide]</b>；
+          <li><b>[:disabled=&quot;formInvalide&quot;]</b>：属性 <b>[disabled]</b> 用于启用/禁用该按钮。该属性通过 v-bind 绑定至第 49 行的计算属性 <b>[formInvalide]</b>；
           </li>
-          <li><b>[@click=&quot;doSomething&quot;]</b>: 当用户点击按钮时，第 59 行中的 <b>[doSomething]</b> 方法将被执行；
+          <li><b>[@click=&quot;doSomething&quot;]</b>：当用户点击该按钮时，将执行第59行的<b>[doSomething]方法</b>；
           </li>
         </ul>
       </li>
-      <li>第 19–22 行：关闭各种未闭合的标签；
+      <li>第 19-22 行：关闭所有已打开的标签；
       </li>
-      <li>第 23–29 行：<b>[template]</b> 中的新行。<b>[class=’mt-3’]</b> 表示 <b>[顶部 (t) 边距 (m) 为 3 个间隔符]</b>。<b>[spacer] </b>是 Bootstrap 的间距单位。该类在上述截图中创建了区域 <b>[8]</b>。若无此类，区域 <b>[7] </b>将与区域 <b>[1-6]</b> 齐平；
+      <li>第23-29行：<b>在[template]中</b>插入新行。<b>[class=’mt-3’]表示[margin (m) top (t) égale à 3 spacers]</b>。[spacer]是Bootstrap的间距单元。 该类在上述截图中生成 <b>[8]</b> 的间距。若无<b>此类，[7]</b> 区域将紧贴 <b>[1-6]</b> 区域；
       </li>
-      <li>第 24 行：一个横跨 4 个 Bootstrap 列的区域；
+      <li>第 24 行：占用 4 个 Bootstrap 列宽的列；
       </li>
-      <li>第 25–27 行：一个 <b>[warning]</b> 提示框，用于显示静态 <b>[children]</b> 属性的值（第 42 行）。由于该属性与输入字段建立了双向绑定，因此一旦用户修改该字段，提示框中显示的值也会随之变化；
+      <li>第 25-27 行：一个 <b>[warning]</b> 提示框，显示静态属性 <b>[enfants]</b>（第 42 行）的值。 由于该属性与输入框存在双向绑定，一旦用户修改输入框内容，提示框中显示的值也会随之改变；
       </li>
-      <li>第 34–65 行：组件的 JavaScript 代码；
+      <li>第 34-65 行：组件的代码 jS；
       </li>
       <li>第 42 行：组件的唯一静态属性；
       </li>
-      <li>第 47–56 行：组件的计算属性；
+      <li>第 47-56 行：组件的计算属性；
       </li>
-      <li>第 53–55 行：若输入为正整数（可选地在前后带有空格），则该输入被视为有效；
+      <li>第 53-55 行：若输入为正整数（前后可带空格），则视为有效；
       </li>
-      <li>第 49–51 行：若输入的子项数量有效，则表单被视为有效。通常，表单包含多个字段，当所有字段均有效时，表单才被视为有效；
+      <li>第49-51行：若“子女数量”的输入有效，则表单被视为有效。通常，表单包含多个输入项，当所有输入均有效时，表单才被视为有效；
       </li>
-      <li>第 58–63 行：组件用于响应其事件的方法。这里只有一个事件：按钮的<b> [click]</b> 事件。我们只需显示输入的值，以证明我们可以访问该值；
+      <li>第58-63行：响应组件事件的组件方法。此处仅有一个事件：按钮上的<b>[click]事件</b>。我们仅显示输入的值，以证明能够正常访问该值；
       </li>
     </ul>
   </li>
 </ul>
-<p><a id="refheadingtoc2479812728496130"></a></p>
-<h2 id="64">6.4. <span style="color: #4f81bd">运行项目</span></h2>
-<p>我们修改 <strong>[package.json]</strong> 文件并运行项目：</p>
+
+<p><span id="refheadingtoc2479812728496130" name="refheadingtoc2479812728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="64">6.4. <span style="color: #4f81bd">项目运行</span></h2>
+<p>修改文件 <strong>[package.json]</strong> 并运行项目：</p>
 <p><img src="images/100000000000071700000277ADBDFF0B.png" width="545" height="189" style="width:14.409cm;height:5.009cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000071700000277ADBDFF0B.png" /></p>
 
 

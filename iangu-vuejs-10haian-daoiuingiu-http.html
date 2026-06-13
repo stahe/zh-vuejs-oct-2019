@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/zh-vuejs-oct-2019/iangu-vuejs-10dao-haianiu-http-ingiu.html">
+        <link rel="canonical" href="https://stahe.github.io/zh-vuejs-oct-2019/iangu-vuejs-10haian-daoiuingiu-http.html">
       
       
-        <link rel="prev" href="iangu-vuejs-09hiong-eventbus-haian.html">
+        <link rel="prev" href="iangu-vuejs-09hionghaian-eventbus.html">
       
       
-        <link rel="next" href="vuejs-11-ianguuouuaoang.html">
+        <link rel="next" href="iangu-vuejs-11uouuaoang.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>12. 项目 [vuejs-10]：[dao] 插件，异步 HTTP 请求 - 通过示例了解 Vue.js 框架</title>
+        <title>12. 项目 [vuejs-10]：插件 [dao]，异步请求 HTTP - 通过示例了解 Vue.js 框架</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#12-vuejs-10dao-http" class="md-skip">
+        <a href="#12-vuejs-10-dao-http" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              12. 项目 [vuejs-10]：[dao] 插件，异步 HTTP 请求
+              12. 项目 [vuejs-10]：插件 [dao]，异步请求 HTTP
             
           </span>
         </div>
@@ -303,14 +305,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-uangiauen.html" class="md-nav__link">
+      <a href="vuejsuangiaianie.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. VUE.JS 框架入门
+    1. VUE.JS框架简介
   
 
     
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="huangianonguouaning.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    2. 创建工作环境
   
 
     
@@ -357,14 +359,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-01ihuian.html" class="md-nav__link">
+      <a href="iangu-vuejs-01ihuhihi.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. 项目 [vuejs-01]：基础篇
+    3. 项目 [vuejs-01]：基础知识
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-02hiong-bootstrap-css-uangia.html" class="md-nav__link">
+      <a href="iangu-vuejs-02hiong-bootstrap-uangia.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 项目 [vuejs-02]：使用 Bootstrap CSS 框架
+    4. 项目 [vuejs-02]：使用 Bootstrap 框架
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-03hiianhui.html" class="md-nav__link">
+      <a href="iangu-vuejs-03hiianuani.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. 项目 [vuejs-03]：事件处理
+    5. 项目 [vuejs-03]：事件管理
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-04hiing-v-model-v-bindiuanhuingiaoanhuu.html" class="md-nav__link">
+      <a href="iangu-vuejs-04hiing-v-model-v-bindiuanhuinghuuiaoan.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、表单输入
+    6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、输入表单
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-05-ianguv-for-hiing.html" class="md-nav__link">
+      <a href="iangu-vuejs-05hiing-v-for.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. [vuejs-05] 项目：[v-for] 指令
+    7. 项目 [vuejs-05]：指令 [v-for]
   
 
     
@@ -519,14 +521,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-07uianengihongehiianhuano.html" class="md-nav__link">
+      <a href="iangu-vuejs-07aiuianengiieouhonghangaohiian.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. 项目 [vuejs-07]：组件层级中的事件传播
+    9. 项目 [vuejs-07]：在组件层次结构中上报事件
   
 
     
@@ -546,14 +548,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-08uuianengiuuanehiianuianhenginghoui.html" class="md-nav__link">
+      <a href="iangu-vuejs-08uuianengiieouuuanehiianuianhenginghoui.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. 项目 [vuejs-08]：与组件层级无关的事件，组件生命周期
+    10. 项目 [vuejs-08]：与组件层次结构无关的事件、组件生命周期
   
 
     
@@ -573,14 +575,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-09hiong-eventbus-haian.html" class="md-nav__link">
+      <a href="iangu-vuejs-09hionghaian-eventbus.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. 项目 [vuejs-09]：使用 [eventBus] 插件
+    11. 项目 [vuejs-09]：使用插件 [eventBus]
   
 
     
@@ -616,7 +618,7 @@
   <span class="md-ellipsis">
     
   
-    12. 项目 [vuejs-10]：[dao] 插件，异步 HTTP 请求
+    12. 项目 [vuejs-10]：插件 [dao]，异步请求 HTTP
   
 
     
@@ -627,14 +629,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="iangu-vuejs-10dao-haianiu-http-ingiu.html" class="md-nav__link md-nav__link--active">
+      <a href="iangu-vuejs-10haian-daoiuingiu-http.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. 项目 [vuejs-10]：[dao] 插件，异步 HTTP 请求
+    12. 项目 [vuejs-10]：插件 [dao]，异步请求 HTTP
   
 
     
@@ -663,7 +665,7 @@
   <a href="#121" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12.1. 安装依赖项
+        12.1. 依赖项安装
       
     </span>
   </a>
@@ -674,7 +676,7 @@
   <a href="#122-dao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12.2. [Dao] 类
+        12.2. 类 [Dao]
       
     </span>
   </a>
@@ -685,7 +687,7 @@
   <a href="#123-plugindao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12.3. [pluginDao] 插件
+        12.3. 插件 [pluginDao]
       
     </span>
   </a>
@@ -718,7 +720,7 @@
   <a href="#126-component1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12.6. [Component1] 组件
+        12.6. 组件 [Component1]
       
     </span>
   </a>
@@ -729,7 +731,7 @@
   <a href="#127" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12.7. 运行项目
+        12.7. 项目运行
       
     </span>
   </a>
@@ -751,14 +753,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-11-ianguuouuaoang.html" class="md-nav__link">
+      <a href="iangu-vuejs-11uouuaoang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. [vuejs-11] 项目：路由与导航
+    13. 项目 [vuejs-11]：路由与导航
   
 
     
@@ -778,14 +780,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-12html-iaoeuani.html" class="md-nav__link">
+      <a href="iangu-vuejs-12uaniiao-html.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 项目 [vuejs-12]：HTML 表格管理
+    14. 项目 [vuejs-12]：管理表 HTML
   
 
     
@@ -805,14 +807,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-13hionguiuaenginuian.html" class="md-nav__link">
+      <a href="iangu-vuejs-13uianenginhionguiua.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. 项目 [vuejs-13]：使用会话更新组件
+    15. 项目 [vuejs-13]：组件更新，使用会话
   
 
     
@@ -832,14 +834,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-14hiuiuauiiangueiianginghieing.html" class="md-nav__link">
+      <a href="iangu-vuejs-14hiuiuauouianginging.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. 项目 [vuejs-14]：使会话对象具备响应式特性
+    16. 项目 [vuejs-14]：使会话具有响应性
   
 
     
@@ -859,14 +861,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-15hiong-vuex-haian.html" class="md-nav__link">
+      <a href="iangu-vuejs-15hionghaian-vuex.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. 项目 [vuejs-15]：使用 [Vuex] 插件
+    17. 项目 [vuejs-15]：使用插件 [Vuex]
   
 
     
@@ -886,14 +888,14 @@
   
   
     <li class="md-nav__item">
-      <a href="huieiiuanuuie-vuejs-euuan.html" class="md-nav__link">
+      <a href="huiuiuanuuieeuuan-vuejs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    18. 税费计算服务器的 Vue.js 客户端
+    18. 税务计算服务器的客户端 Vue.js
   
 
     
@@ -913,14 +915,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-euuanaiin.html" class="md-nav__link">
+      <a href="vuejseuuaneaiin.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    19. Vue.js 客户端改进
+    19. Vue.js客户端的改进
   
 
     
@@ -977,246 +979,248 @@
 
 
 
-<p><a id="refheadingtoc2480492728496130"></a></p>
-<h1 id="12-vuejs-10dao-http">12. <span style="color: #365f91"><strong>项目</strong> [vuejs-10]<strong>：</strong>[dao] <strong>插件，异步 HTTP 请求</strong></span></h1>
-<p><strong>[vuejs-10]</strong> 项目的目录结构如下：</p>
-<p><img src="images/100000000000017F0000014C6FA960FB.png" width="134" height="116" style="width:3.551cm;height:3.078cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017F0000014C6FA960FB.png" /></p>
-<p><strong>[vuejs-10]</strong> 项目演示了一个组件向远程服务器发起 HTTP 请求。其采用的架构如下：</p>
-<p><img src="images/10000000000008690000024E0C4F847A.png" width="646" height="177" style="width:17.09cm;height:4.683cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008690000024E0C4F847A.png" /></p>
-<p>一个 <strong>[Vue.js]</strong> 组件通过 <strong>[dao]</strong> 层与税费计算服务器进行通信。</p>
-<p><a id="refheadingtoc2480512728496130"></a></p>
-<h2 id="121">12.1. <span style="color: #4f81bd">安装依赖项</span></h2>
-<p><strong>[vuejs-10]</strong> 应用程序使用 <strong>[axios]</strong> 库向税费计算服务器发起异步请求。我们需要安装此依赖项：</p>
-<p><img src="images/100000000000076A0000018CD19A0CFA.png" width="570" height="119" style="width:15.071cm;height:3.143cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000076A0000018CD19A0CFA.png" /></p>
+<p><span id="refheadingtoc2480492728496130" name="refheadingtoc2480492728496130" class="odt-bookmark-anchor"></span></p>
+<h1 id="12-vuejs-10-dao-http">12. <span style="color: #365f91">项目 [vuejs-10]<strong>：插件 [dao]，异步请求 HTTP</strong></span></h1>
+<p>项目 <strong>[vuejs-10]</strong> 的目录结构如下：</p>
+<p><img src="images/100000000000017F0000014C6FA960FB.png" width="134" height="116" style="width:3.551cm;height:3.069cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017F0000014C6FA960FB.png" /></p>
+<p><strong>[vuejs-10]</strong> 项目展示了一个向远程服务器发起 HTTP 请求的组件。所采用的架构如下：</p>
+<p><img src="images/10000000000008690000024E0C4F847A.png" width="646" height="177" style="width:17.09cm;height:4.68cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008690000024E0C4F847A.png" /></p>
+<p><strong>[Vue.js]</strong> 组件利用 <strong>[dao]</strong> 层与税费计算服务器进行交互。</p>
+<p><span id="refheadingtoc2480512728496130" name="refheadingtoc2480512728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="121">12.1. <span style="color: #4f81bd"><strong>依赖项安装</strong></span></h2>
+<p>应用程序 <strong>[vuejs-10]</strong> 使用库 <strong>[axios]</strong> 向税费计算服务器发送异步请求。我们需要安装此依赖项：</p>
+<p><img src="images/100000000000076A0000018CD19A0CFA.png" width="570" height="119" style="width:15.071cm;height:3.14cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000076A0000018CD19A0CFA.png" /></p>
 <ul>
-  <li>在 <b>[4-5] </b>中，安装 <b>[axios]</b> 库 <b>[1-3]</b> 后，向 <b>[package.json]</b> 文件中添加的行；
+  <li>在 <b>[4-5] </b>中，安装 <b>[axios]</b> 库后，在 <b>[package.json]</b> 文件中添加的行 <b>[1-3]</b>；
   </li>
 </ul>
-<p><a id="refheadingtoc2480532728496130"></a></p>
-<h2 id="122-dao">12.2. <span style="color: #4f81bd">[Dao] <strong>类</strong></span></h2>
-<p><strong>[Dao]</strong> 类是在 <a href="#1112la-classe-daooutline"><u><span style="color: #0563c1">[Dao 类]</span></u></a> 一节中开发的。我们在此将其包含进来以供参考：</p>
+
+<p><span id="refheadingtoc2480532728496130" name="refheadingtoc2480532728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="122-dao">12.2. <span style="color: #4f81bd"><strong>类</strong> [Dao]</span></h2>
+<p>类 <strong>[Dao]</strong> 即在段落 <a href="#1112la-classe-daooutline"><u><span style="color: #0563c1">[La classe Dao]</span></u></a> 中开发的类。为便于查阅，在此再次列出：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> qs </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;qs&#x27;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// dao] class</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 类 [Dao]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Dao</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// manufacturer</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 构造函数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">constructor</span><span style="color:#000000">(axios) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.axios = axios;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// session cookie</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 会话cookie</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.sessionCookieName = </span><span style="color:#a31515">&quot;PHPSESSID&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.sessionCookie = </span><span style="color:#a31515">&#x27;&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// init session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 初始化会话</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">async</span><span style="color:#000000">  initSession() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// query options HHTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 请求选项 HHTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> options = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      method: </span><span style="color:#a31515">&quot;GET&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// URL parameters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// URL的参数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      params: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        action: </span><span style="color:#a31515">&#x27;init-session&#x27;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        type: </span><span style="color:#a31515">&#x27;json&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    };</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// execute query HTTP</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 执行查询 HTTP</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">await</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">.getRemoteData(options);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">async</span><span style="color:#000000">  authentifierUtilisateur(user, password) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// query options HHTP [post /main.php?action=authenticate-user]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 请求选项 HHTP [post /main.php?action=authentifier-utilisateur]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> options = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      method: </span><span style="color:#a31515">&quot;POST&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      headers: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">&#x27;Content-type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// body of POST</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// POST 的正文</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      data: qs.stringify({</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        user: user,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        password: password</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }),</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// URL parameters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// URL的参数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      params: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        action: </span><span style="color:#a31515">&#x27;authentifier-utilisateur&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    };</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// execute query HTTP</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// HTTP 请求的执行</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">await</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">.getRemoteData(options);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">async</span><span style="color:#000000"> getAdminData() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// query options HHTP [get /main.php?action=get-admindata]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// HHTP 查询选项  [get /main.php?action=get-admindata]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> options = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      method: </span><span style="color:#a31515">&quot;GET&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// URL parameters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// URL 的参数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      params: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        action: </span><span style="color:#a31515">&#x27;get-admindata&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    };</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// execute query HTTP</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 执行请求 HTTP</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> data = </span><span style="color:#0000ff">await</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">.getRemoteData(options);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 结果</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> data;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">async</span><span style="color:#000000">  getRemoteData(options) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// for the session cookie</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 用于会话cookie</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (!options.headers) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      options.headers = {};</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    options.headers.Cookie = </span><span style="color:#0000ff">this</span><span style="color:#000000">.sessionCookie;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// execute query HTTP</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 执行请求 HTTP</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">let</span><span style="color:#000000"> response;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// asynchronous request</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 异步请求</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      response = </span><span style="color:#0000ff">await</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">.axios.request(</span><span style="color:#a31515">&#x27;main.php&#x27;</span><span style="color:#000000">, options);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// the [error] parameter is an exception instance - it can take various forms</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 参数 [error] 是一个异常实例——它可能有各种形式</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error.response) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// the server response is in [error.response]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 服务器响应位于 [error.response]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        response = error.response;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// error restart</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 重新抛出该错误</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">throw</span><span style="color:#000000"> error;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// response is the entire HTTP response from the server (HTTP headers + response itself)</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// retrieve the session cookie if it exists</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// response 包含服务器响应的全部内容 HTTP（HTTP 头部 + 响应正文）</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 若存在，则获取会话cookie</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> setCookie = response.headers</span><span style="font-weight:bold;color:#000000">[&#x27;set-cookie&#x27;]</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (setCookie) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// setCookie is an array</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// look for the session cookie in this table</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// setCookie 是一个数组</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 在此数组中查找会话cookie</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">let</span><span style="color:#000000"> trouvé = </span><span style="color:#0000ff">false</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">while</span><span style="color:#000000"> (!trouvé &amp;&amp; i &lt; setCookie.length) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// look for the session cookie</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 查找会话cookie</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">const</span><span style="color:#000000"> results = RegExp(</span><span style="color:#a31515">&#x27;^(&#x27;</span><span style="color:#000000"> + </span><span style="color:#0000ff">this</span><span style="color:#000000">.sessionCookieName + </span><span style="color:#a31515">&#x27;.+?);&#x27;</span><span style="color:#000000">).exec(setCookie</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">if</span><span style="color:#000000"> (results) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// the session cookie is stored</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// 保存会话cookie</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// eslint-disable-next-line require-atomic-updates</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">this</span><span style="color:#000000">.sessionCookie = results</span><span style="font-weight:bold;color:#000000">[1]</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// we found</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// 已找到</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          trouvé = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// next item</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// 下一个元素</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          i++;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// the server response is in [response.data]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 服务器响应位于 [response.data]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> response.data;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// class export</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导出类</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> Dao;</span></span></span>
 </code></pre></div>
 
-<p><strong>[vuejs-10]</strong> 项目仅在第 18–30 行使用了异步的 <strong>[initSession]</strong> 方法。请注意，第 10 行通过 <strong>[axios]</strong> 参数实例化了 <strong>[Dao]</strong> 类，该参数由调用代码初始化。在此情况下，调用代码是 <strong>[./main.js]</strong> 脚本。</p>
-<p><a id="refheadingtoc2480552728496130"></a></p>
-<h2 id="123-plugindao">12.3. <span style="color: #4f81bd">[pluginDao] <strong>插件</strong></span></h2>
-<p><strong>[pluginDao]</strong> 插件如下所示：</p>
+<p>项目 <strong>[vuejs-10]</strong> 仅使用第 18-30 行中的异步方法 <strong>[initSession]</strong>。 需要说明的是，类 <strong>[Dao]</strong> 在第 10 行通过参数 <strong>[axios]</strong> 进行实例化，该参数由调用代码初始化。此处的调用代码即为脚本 <strong>[./main.js]</strong>。</p>
+<p><span id="refheadingtoc2480552728496130" name="refheadingtoc2480552728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="123-plugindao">12.3. <span style="color: #4f81bd"><strong>插件</strong> [pluginDao]</span></h2>
+<p>插件 <strong>[pluginDao]</strong> 如下所示：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  install(Vue, dao) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ajoute une propriété [$dao] à la classe Vue</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 向 Vue 类添加属性 [$dao]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    Object.defineProperty(Vue.prototype, </span><span style="color:#a31515">&#x27;$dao&#x27;</span><span style="color:#000000">, {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// lorsque Vue.$dao est référencé, on rend le 2ième paramètre [dao]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 当引用 Vue.$dao 时，返回第二个参数 [dao]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      get: () =&gt; dao,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>如果回顾 <strong>[event-bus]</strong> 插件的说明，我们会发现 <strong>[pluginDao]</strong> 插件会在 <strong>[Vue]</strong> 类/函数中创建一个名为 <strong>[$dao]</strong> 的新属性。该属性的值（如我们将展示的）将是 <strong>[./Dao]</strong> 脚本导出的对象，即前面的 <strong>[Dao]</strong> 类。</p>
-<p><a id="refheadingtoc2480572728496130"></a></p>
+<p>若回顾针对插件 <strong>[event-bus]</strong> 的说明，可知插件 <strong>[pluginDao]</strong> 在类/函数 <strong>[Vue]</strong> 中创建了一个名为 <strong>[$dao]</strong> 的新属性。 该属性的值（尚待验证）将是脚本 <strong>[./Dao]</strong> 导出的对象，即前面的类 <strong>[Dao]</strong>。</p>
+<p><span id="refheadingtoc2480572728496130" name="refheadingtoc2480572728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="124-mainjs">12.4. <span style="color: #4f81bd"><strong>主脚本</strong> [main.js]</span></h2>
 <p>主脚本 <strong>[main.js]</strong> 的代码如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Vue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;vue&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> App </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./App.vue&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// plugins</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 插件</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> BootstrapVue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap-vue&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">Vue.use(BootstrapVue);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// bootstrap</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap/dist/css/bootstrap.css&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap-vue/dist/bootstrap-vue.css&#x27;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// couche [dao]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 层[dao]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Dao </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Dao&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// configuration axios</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// axios 配置</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">axios.defaults.timeout = 2000;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">axios.defaults.baseURL = </span><span style="color:#a31515">&#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">axios.defaults.baseURL = &#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">axios.defaults.withCredentials = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// instanciation couche [dao]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// [dao] 层实例化</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> dao = </span><span style="color:#0000ff">new</span><span style="color:#000000"> Dao(axios);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// plugin [dao]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 插件 [dao]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> pluginDao </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./plugins/dao&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">Vue.use(pluginDao, dao)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// configuration</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 配置</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Vue.config.productionTip = </span><span style="color:#0000ff">false</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// instanciation projet [App]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 项目实例化 [App]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">new</span><span style="color:#000000"> Vue({</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  render: h =&gt; h(App),</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}).$mount(</span><span style="color:#a31515">&#x27;#app&#x27;</span><span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}).$mount(&#x27;#app&#x27;)</span></span>
 </code></pre></div>
 
-<p><strong>[main.js]</strong> 脚本：</p>
+<p>脚本 <strong>[main.js]</strong>：</p>
 <ul>
-  <li>在第 14–21 行实例化 <b>[dao]</b> 层；
+  <li>在第 14-21 行实例化 <b>[dao]</b> 层；
   </li>
-  <li>在第 24–25 行引入 <b>[pluginDao]</b> 插件；
+  <li>在第24-25行集成<b>插件[pluginDao]</b>；
   </li>
-  <li>第 15 行：导入 <b>[Dao]</b> 类；
+  <li>第 15 行：导入类 <b>[Dao]</b>；
   </li>
-  <li>第 17–18 行：配置了用于处理 HTTP 请求的 <b>[axios]</b> 对象。该对象在第 4 行被导入；
+  <li>第17-18行：配置<b>对象[axios]</b>，该对象负责执行HTTP请求。该对象在第4行被导入；
     <ul>
-      <li>第 17 行：定义了 2 秒的<b> [timeout]</b>；
+      <li>第17行：定义一个2秒的<b>[timeout]</b>；
       </li>
-      <li>第 18 行：税费计算服务器的 URL；
+      <li>第18行：税款计算服务器的URL；
       </li>
-      <li>第 19 行：启用与服务器的 Cookie 交换；
+      <li>第19行：用于与服务器交换Cookie；
       </li>
     </ul>
   </li>
-  <li>第 24–25 行：使用 <b>[pluginDao]</b> 插件
+  <li>第24-25行：使用<b>[pluginDao]</b>插件
     <ul>
-      <li>第 24 行：导入插件；
+      <li>第24行：导入插件；
       </li>
-      <li>第 25 行：集成该插件。我们可以看到，<b>[Vue.use]</b> 方法的第二个参数是第 21 行定义的<b> [dao]</b> 层的引用。这就是为什么 <b>[Vue.$dao]</b> 属性在 <b>[Vue]</b> 类/函数的所有实例中（即所有 <b>[Vue.js]</b> 组件中）都会指向 <b>[dao]</b> 层；
+      <li>第25行：集成插件。可以看到，<b>方法[Vue.use]的</b>第二个参数是第21行定义的<b>[dao]层的</b>引用。 正因如此，在 <b>[Vue]</b> 类/函数的所有实例中（即所有 <b>[Vue.js]</b> 组件中），属性 <b>[Vue.$dao] </b>将指向图层 <b>[dao]</b>；
       </li>
     </ul>
   </li>
 </ul>
-<p><a id="refheadingtoc2480592728496130"></a></p>
+
+<p><span id="refheadingtoc2480592728496130" name="refheadingtoc2480592728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="125-appvue">12.5. <span style="color: #4f81bd"><strong>主视图</strong> [App.vue]</span></h2>
 <p>主视图 <strong>[App]</strong> 的代码如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#000000"> </span><span style="color:#ff0000">class</span><span style="color:#0000ff">=&quot;container&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- message --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- 消息 --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;success&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">[vuejs-10]</span><span style="color:#000000"> : plugin </span><span style="font-weight:bold;color:#000000">[dao]</span><span style="color:#000000">, requêtes HTTP asynchrones</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- composant faisant une requête asynchrone au serveur de calcul d&#x27;impôt--&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- 向税费计算服务器发起异步请求的组件--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Component1</span><span style="color:#000000"> </span><span style="color:#ff0000">@error</span><span style="color:#0000ff">=&quot;doSomethingWithError&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">@endWaiting</span><span style="color:#0000ff">=&quot;endWaiting&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">@beginWaiting</span><span style="color:#0000ff">=&quot;beginWaiting&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- affichage d&#x27;une éventuelle erreur --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- 显示可能出现的错误 --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">               </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;danger&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">               </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;showError&quot;&gt;</span><span style="color:#000000">Evénement </span><span style="font-weight:bold;color:#000000">[error]</span><span style="color:#000000"> intercepté par </span><span style="font-weight:bold;color:#000000">[App]</span><span style="color:#000000">. Valeur reçue = </span><span style="font-weight:bold;color:#000000">{{</span><span style="color:#800080">error</span><span style="font-weight:bold;color:#000000">}}</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- message d&#x27;attente avec un spinner --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- 带加载图标的等待提示 --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;showWaiting&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;light&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Requête au serveur de calcul d&#x27;impôt en cours...</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-spinner</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">label</span><span style="color:#0000ff">=&quot;Spinning&quot;&gt;&lt;/</span><span style="color:#800000">b-spinner</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1224,45 +1228,45 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Component1 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./components/Component1&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// état du composant</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 组件状态</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    data() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// contrôle le spinner d&#x27;attente</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 控制加载图标</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        showWaiting: </span><span style="color:#0000ff">false</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// contrôle l&#x27;affichage de l&#x27;erreur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 控制错误显示</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        showError: </span><span style="color:#0000ff">false</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// l&#x27;erreur interceptée</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 拦截的错误</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        error: {}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      };</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// composants utilisés</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 使用的组件</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    components: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      Component1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// méthodes de gestion des évts</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 事件处理方法</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    methods: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// début attente</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 开始等待</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      beginWaiting() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// on affiche l&#x27;attente</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 显示等待状态</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.showWaiting = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// on cache le msg d&#x27;erreur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 隐藏错误消息</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.showError = </span><span style="color:#0000ff">false</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// fin attente</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 结束等待</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      endWaiting() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// on cache l&#x27;attente</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 隐藏等待</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.showWaiting = </span><span style="color:#0000ff">false</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// gestion d&#x27;erreur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 错误处理</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      doSomethingWithError(error) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// on note qu&#x27;il y a eu erreur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 记录已发生错误</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.error = error;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// on affiche le msg d&#x27;erreur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 显示错误信息</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.showError = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1270,31 +1274,32 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><strong>评论</strong></p>
+<p><strong>注释</strong></p>
 <ul>
-  <li>第 9 行：<b>[Component1] </b>是发起异步 HTTP 请求的组件。它可以触发三个事件：
+  <li>第 9 行：<b>[Component1] </b>是执行异步请求 HTTP 的组件。它可能触发三个事件：
     <ul>
-      <li><b>[beginWaiting]</b>：请求即将发出。必须向用户显示一条等待提示；
+      <li><b>[beginWaiting]</b>：请求即将发出。需向用户显示等待提示；
       </li>
-      <li><b>[endWaiting]</b>：请求已完成。必须停止等待；
+      <li><b>[endWaiting]</b>：请求已完成。需停止等待；
       </li>
-      <li><b>[error]</b>：请求失败。必须显示错误消息；
+      <li><b>[error]</b>：请求失败。需显示错误提示；
       </li>
     </ul>
   </li>
-  <li>第 10–13 行：用于显示错误消息的提示框。它由第 33 行的布尔变量 <b>[showError]</b> 控制。该提示框在第 35 行显示错误信息；
+  <li>第 10-13 行：显示可能出现的错误信息的提示框。该提示框由第 33 行的布尔值 <b>[showError]</b> 控制。它显示第 35 行的错误信息；
   </li>
-  <li>第 14–18 行：显示带旋转图标的等待提示的 Alert 控件。由第 47 行的布尔变量 <b>[showWaiting]</b> 控制；
+  <li>第14-18行：显示带加载图标的等待提示的警报。该警报由第47行的布尔变量[showWaiting]控制；
   </li>
-  <li>第 45–50 行：<b>[beginWaiting] </b>是接收到 <b>[beginWaiting]</b> 事件时执行的方法。它会显示等待提示（第 47 行），并隐藏错误提示（第 49 行），以防该提示在前一次操作后仍可见；
+  <li>第 45-50 行：<b>[beginWaiting] </b>是接收到 <b>[beginWaiting]</b> 事件时执行的方法。 该方法显示等待提示（第47行），并隐藏错误提示（第49行），以防该提示因先前操作而可见；
   </li>
-  <li>第 52–55 行：<b>[endWaiting] </b>是接收到 <b>[endWaiting]</b> 事件时执行的方法。它隐藏等待消息（第 54 行）；
+  <li>第 52-55 行：<b>[endWaiting] </b>是接收到事件 <b>[endWaiting]</b> 时执行的方法。它隐藏了等待消息（第 54 行）；
   </li>
-  <li>第 57–62 行：<b>[doSomethingWithError] </b>是接收到 <b>[error]</b> 事件时执行的方法。它记录接收到的错误（第 59 行）并显示错误消息（第 61 行）；
+  <li>第 57-62 行：<b>[doSomethingWithError] </b>是接收到事件 <b>[error]</b> 时执行的方法。它记录接收到的错误（第 59 行）并显示错误消息（第 61 行）；
   </li>
 </ul>
-<p><a id="refheadingtoc2480612728496130"></a></p>
-<h2 id="126-component1">12.6. <span style="color: #4f81bd">[Component1] <strong>组件</strong></span></h2>
+
+<p><span id="refheadingtoc2480612728496130" name="refheadingtoc2480612728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="126-component1">12.6. <span style="color: #4f81bd"><strong>组件</strong> [Component1]</span></h2>
 <p><strong>[Component1]</strong> 组件的代码如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1306,47 +1311,47 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;component1&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// component status</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 组件状态</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    data() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        showMsg: </span><span style="color:#0000ff">false</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      };</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// event management methods</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 事件处理方法</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    methods: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// processing data received from the server</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 处理从服务器接收到的数据</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      doSomethingWithData(data) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// record the data received</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 记录接收到的数据</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.data = data;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// we display it</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 显示数据</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.showMsg = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// the component has just been created</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 组件已创建</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    created() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// initialize the session with the server - asynchronous request</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// we use the promise rendered by the [dao] layer methods</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// we signal the start of the operation</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 与服务器初始化会话 - 异步请求</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 使用 QZXW2HTML 层方法返回的 PromiseBW2Rhb10ZQX</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 报告操作开始</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">this</span><span style="color:#000000">.$emit(</span><span style="color:#a31515">&quot;beginWaiting&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// asynchronous operation is launched</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 启动异步操作</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">this</span><span style="color:#000000">.$dao</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// initialize a jSON session with the tax calculation server</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 这是与税务计算服务器初始化一个 jSON 会话</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        .initSession()</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// method that processes the data received in the event of success</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 成功时处理接收到的数据的方法</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        .then(data =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// we process the data received</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// 处理接收到的数据</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">this</span><span style="color:#000000">.doSomethingWithData(data);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        })</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// error handling method in case of error</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 处理错误的函数（若发生错误）</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        .catch(error =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// the error is traced back to the parent component</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// 将错误上报给父组件</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">this</span><span style="color:#000000">.$emit(</span><span style="color:#a31515">&quot;error&quot;</span><span style="color:#000000">, error.message);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }).finally(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// end of wait</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// 等待结束</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">this</span><span style="color:#000000">.$emit(</span><span style="color:#a31515">&quot;endWaiting&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1354,33 +1359,34 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><strong>评论</strong></p>
+<p><strong>注释</strong></p>
 <ul>
-  <li>第 4–6 行：该组件包含一个警报，用于显示税费计算服务器返回的值，但仅在 HTTP 请求成功时显示。该警报由第 17 行的布尔变量 <b>[showMsg]</b> 控制；
+  <li>第 4-6 行：该组件仅包含一个警报，用于显示税务计算服务器返回的值，但仅在 HTTP 请求成功时才会显示。 该提示由第 17 行的布尔值 <b>[showMsg]</b> 控制；
   </li>
-  <li>第 31–53 行：组件创建后立即发出 HTTP 请求。因此，相关代码被放置在第 31 行的 <b>[created]</b> 方法中；
+  <li>第31-53行：组件创建完成后立即执行HTTP请求。因此，其代码被放置在第31行的<b>[created]方法中</b>；
   </li>
-  <li>第 35 行：通知父组件异步请求即将开始；
+  <li>第 35 行：通知父组件异步请求即将启动；
   </li>
-  <li>第 37–39 行：执行 <b>[this.$dao.initSession]</b> 方法。该方法用于与税费计算服务器初始化一个 JSON 会话。此方法的直接返回结果是一个 <b>[Promise]</b>；
+  <li>第37-39行：执行<b>方法[this.$dao.initSession]</b>。该方法通过税务计算服务器初始化一个jSON会话。该方法的直接结果<b>是一个[Promise]</b>；
   </li>
-  <li>第 41–44 行：当服务器返回结果且未发生错误时，此代码将执行。服务器的结果存储在 <b>[data] </b>中。在第 43 行，我们调用 <b>[doSomethingWithData]</b> 方法来处理该结果；
+  <li>第 41-44 行：当服务器无错误地返回结果时，此代码将执行。服务器的结果存储在 <b>[data]</b> 中。第 43 行，调用 <b>[doSomethingWithData]</b> 方法处理该结果；
   </li>
-  <li>第 46–49 行：若请求执行过程中发生错误，则执行此代码。第 48 行通知父组件已发生错误，并将错误消息 <b>[error.message]</b> 传递给它；
+  <li>第 46-49 行：当请求执行过程中发生错误时，此代码将被执行。第 48 行，通知父组件已发生错误，并向其传递错误消息 <b>[error.message]</b>；
   </li>
-  <li>第 49–52 行：此代码在所有情况下都会执行。我们通知父组件 HTTP 请求已完成；
+  <li>第49-52行：该代码在任何情况下都会执行。向父组件报告请求HTTP已完成；
   </li>
-  <li>第 23–28 行：<b>[doSomethingWithData]</b> 方法负责处理服务器发送的数据 <b>[data]</b>。第 25 行将该数据存储起来，第 27 行将其显示出来；
+  <li>第23-28行：<b>方法</b>[doSomethingWithData]负责处理服务器发送<b>的数据[data]</b>。第25行，将该数据保存；第27行，将其显示；
   </li>
 </ul>
-<p><a id="refheadingtoc2480632728496130"></a></p>
-<h2 id="127">12.7. <span style="color: #4f81bd">运行项目</span></h2>
-<p><img src="images/10000000000006F40000024A89EDD34C.png" width="534" height="176" style="width:14.131cm;height:4.651cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006F40000024A89EDD34C.png" /></p>
-<p>如果项目启动时税费计算服务器未运行，将得到以下结果：</p>
-<p><img src="images/1000000000000743000001E5B468F398.png" width="557" height="145" style="width:14.75cm;height:3.849cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000743000001E5B468F398.png" /></p>
-<p>让我们启动 <strong>[Laragon]</strong> 服务器（参见<a href="https://tahe.developpez.com/tutoriels-cours/php7"><u><span style="color: #0563c1"> https://tahe.developpez.com/tutoriels-cours/php7</span></u></a>），并重新加载上述页面。此时结果如下：</p>
-<p><img src="images/1000000000000713000001DF5E41F39C.png" width="543" height="144" style="width:14.37cm;height:3.801cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000713000001DF5E41F39C.png" /></p>
-<p><strong>注意</strong>：我们使用的是<a href="https://tahe.developpez.com/tutoriels-cours/php7"><u><span style="color: #0563c1"> https://tahe.developpez.com/tutoriels-cours/php7</span></u></a> 中定义的第 14 版税费计算服务器。</p>
+
+<p><span id="refheadingtoc2480632728496130" name="refheadingtoc2480632728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="127">12.7. <span style="color: #4f81bd">项目运行</span></h2>
+<p><img src="images/10000000000006F40000024A89EDD34C.png" width="534" height="176" style="width:14.131cm;height:4.65cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006F40000024A89EDD34C.png" /></p>
+<p>如果启动项目时税费计算服务器未运行，则会得到以下结果：</p>
+<p><img src="images/1000000000000743000001E5B468F398.png" width="557" height="146" style="width:14.75cm;height:3.851cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000743000001E5B468F398.png" /></p>
+<p>启动服务器 <strong>[Laragon]</strong>（参见<a href="https://tahe.developpez.com/tutoriels-cours/php7"><u><span style="color: #0563c1"> https://tahe.developpez.com/tutoriels-cours/php7</span></u></a>），并重新加载上述页面。此时结果如下：</p>
+<p><img src="images/1000000000000713000001DF5E41F39C.png" width="543" height="144" style="width:14.37cm;height:3.799cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000713000001DF5E41F39C.png" /></p>
+<p><strong>注</strong>：此处使用的是<a href="https://tahe.developpez.com/tutoriels-cours/php7"><u><span style="color: #0563c1"> https://tahe.developpez.com/tutoriels-cours/php7</span></u></a> 中定义的第 14 版税费计算服务器。</p>
 
 
 

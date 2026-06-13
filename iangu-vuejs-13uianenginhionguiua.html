@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/zh-vuejs-oct-2019/iangu-vuejs-14hiuiuauiiangueiianginghieing.html">
+        <link rel="canonical" href="https://stahe.github.io/zh-vuejs-oct-2019/iangu-vuejs-13uianenginhionguiua.html">
       
       
-        <link rel="prev" href="iangu-vuejs-13hionguiuaenginuian.html">
+        <link rel="prev" href="iangu-vuejs-12uaniiao-html.html">
       
       
-        <link rel="next" href="iangu-vuejs-15hiong-vuex-haian.html">
+        <link rel="next" href="iangu-vuejs-14hiuiuauouianginging.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>16. 项目 [vuejs-14]：使会话对象具备响应式特性 - 通过示例了解 Vue.js 框架</title>
+        <title>15. 项目 [vuejs-13]：组件更新，使用会话 - 通过示例了解 Vue.js 框架</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#16-vuejs-14" class="md-skip">
+        <a href="#15-vuejs-13" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              16. 项目 [vuejs-14]：使会话对象具备响应式特性
+              15. 项目 [vuejs-13]：组件更新，使用会话
             
           </span>
         </div>
@@ -303,14 +305,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-uangiauen.html" class="md-nav__link">
+      <a href="vuejsuangiaianie.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. VUE.JS 框架入门
+    1. VUE.JS框架简介
   
 
     
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="huangianonguouaning.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    2. 创建工作环境
   
 
     
@@ -357,14 +359,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-01ihuian.html" class="md-nav__link">
+      <a href="iangu-vuejs-01ihuhihi.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. 项目 [vuejs-01]：基础篇
+    3. 项目 [vuejs-01]：基础知识
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-02hiong-bootstrap-css-uangia.html" class="md-nav__link">
+      <a href="iangu-vuejs-02hiong-bootstrap-uangia.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 项目 [vuejs-02]：使用 Bootstrap CSS 框架
+    4. 项目 [vuejs-02]：使用 Bootstrap 框架
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-03hiianhui.html" class="md-nav__link">
+      <a href="iangu-vuejs-03hiianuani.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. 项目 [vuejs-03]：事件处理
+    5. 项目 [vuejs-03]：事件管理
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-04hiing-v-model-v-bindiuanhuingiaoanhuu.html" class="md-nav__link">
+      <a href="iangu-vuejs-04hiing-v-model-v-bindiuanhuinghuuiaoan.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、表单输入
+    6. 项目 [vuejs-04]：指令 [v-model, v-bind]、计算属性、输入表单
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-05-ianguv-for-hiing.html" class="md-nav__link">
+      <a href="iangu-vuejs-05hiing-v-for.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. [vuejs-05] 项目：[v-for] 指令
+    7. 项目 [vuejs-05]：指令 [v-for]
   
 
     
@@ -519,14 +521,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-07uianengihongehiianhuano.html" class="md-nav__link">
+      <a href="iangu-vuejs-07aiuianengiieouhonghangaohiian.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. 项目 [vuejs-07]：组件层级中的事件传播
+    9. 项目 [vuejs-07]：在组件层次结构中上报事件
   
 
     
@@ -546,14 +548,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-08uuianengiuuanehiianuianhenginghoui.html" class="md-nav__link">
+      <a href="iangu-vuejs-08uuianengiieouuuanehiianuianhenginghoui.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. 项目 [vuejs-08]：与组件层级无关的事件，组件生命周期
+    10. 项目 [vuejs-08]：与组件层次结构无关的事件、组件生命周期
   
 
     
@@ -573,14 +575,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-09hiong-eventbus-haian.html" class="md-nav__link">
+      <a href="iangu-vuejs-09hionghaian-eventbus.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. 项目 [vuejs-09]：使用 [eventBus] 插件
+    11. 项目 [vuejs-09]：使用插件 [eventBus]
   
 
     
@@ -600,14 +602,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-10dao-haianiu-http-ingiu.html" class="md-nav__link">
+      <a href="iangu-vuejs-10haian-daoiuingiu-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. 项目 [vuejs-10]：[dao] 插件，异步 HTTP 请求
+    12. 项目 [vuejs-10]：插件 [dao]，异步请求 HTTP
   
 
     
@@ -627,14 +629,14 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-11-ianguuouuaoang.html" class="md-nav__link">
+      <a href="iangu-vuejs-11uouuaoang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. [vuejs-11] 项目：路由与导航
+    13. 项目 [vuejs-11]：路由与导航
   
 
     
@@ -654,41 +656,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-12html-iaoeuani.html" class="md-nav__link">
+      <a href="iangu-vuejs-12uaniiao-html.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 项目 [vuejs-12]：HTML 表格管理
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="iangu-vuejs-13hionguiuaenginuian.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    15. 项目 [vuejs-13]：使用会话更新组件
+    14. 项目 [vuejs-12]：管理表 HTML
   
 
     
@@ -724,7 +699,7 @@
   <span class="md-ellipsis">
     
   
-    16. 项目 [vuejs-14]：使会话对象具备响应式特性
+    15. 项目 [vuejs-13]：组件更新，使用会话
   
 
     
@@ -735,14 +710,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="iangu-vuejs-14hiuiuauiiangueiianginghieing.html" class="md-nav__link md-nav__link--active">
+      <a href="iangu-vuejs-13uianenginhionguiua.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. 项目 [vuejs-14]：使会话对象具备响应式特性
+    15. 项目 [vuejs-13]：组件更新，使用会话
   
 
     
@@ -768,10 +743,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#161-session" class="md-nav__link">
+  <a href="#151-session" class="md-nav__link">
     <span class="md-ellipsis">
       
-        16.1. [session] 对象
+        15.1. 对象 [session]
       
     </span>
   </a>
@@ -779,10 +754,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#162-pluginspluginsession" class="md-nav__link">
+  <a href="#152-pluginspluginsession" class="md-nav__link">
     <span class="md-ellipsis">
       
-        16.2. [./plugins/pluginSession] 插件
+        15.2. 插件 [./plugins/pluginSession]
       
     </span>
   </a>
@@ -790,10 +765,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#163-mainjs" class="md-nav__link">
+  <a href="#153-mainjs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        16.3. 主脚本 [main.js]
+        15.3. 主脚本 [main.js]
       
     </span>
   </a>
@@ -801,10 +776,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#164-app" class="md-nav__link">
+  <a href="#154-app" class="md-nav__link">
     <span class="md-ellipsis">
       
-        16.4. 主视图 [App]
+        15.4. 主视图 [App]
       
     </span>
   </a>
@@ -812,10 +787,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#165-table" class="md-nav__link">
+  <a href="#155-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        16.5. [Table] 组件
+        15.5. 组件 [Table]
       
     </span>
   </a>
@@ -823,10 +798,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#166" class="md-nav__link">
+  <a href="#156" class="md-nav__link">
     <span class="md-ellipsis">
       
-        16.6. 运行项目
+        15.6. 项目执行
       
     </span>
   </a>
@@ -848,14 +823,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iangu-vuejs-15hiong-vuex-haian.html" class="md-nav__link">
+      <a href="iangu-vuejs-14hiuiuauouianginging.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. 项目 [vuejs-15]：使用 [Vuex] 插件
+    16. 项目 [vuejs-14]：使会话具有响应性
   
 
     
@@ -875,14 +850,14 @@
   
   
     <li class="md-nav__item">
-      <a href="huieiiuanuuie-vuejs-euuan.html" class="md-nav__link">
+      <a href="iangu-vuejs-15hionghaian-vuex.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    18. 税费计算服务器的 Vue.js 客户端
+    17. 项目 [vuejs-15]：使用插件 [Vuex]
   
 
     
@@ -902,14 +877,41 @@
   
   
     <li class="md-nav__item">
-      <a href="vuejs-euuanaiin.html" class="md-nav__link">
+      <a href="huiuiuanuuieeuuan-vuejs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    19. Vue.js 客户端改进
+    18. 税务计算服务器的客户端 Vue.js
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vuejseuuaneaiin.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. Vue.js客户端的改进
   
 
     
@@ -966,81 +968,174 @@
 
 
 
-<p><a id="refheadingtoc7730421135184966"></a></p>
-<h1 id="16-vuejs-14">16. <span style="color: #365f91"><strong>项目</strong> [vuejs-14]<strong>：使会话对象具备响应式特性</strong></span></h1>
-<p>我们看到，上一个项目中使用的 <strong>[session]</strong> 对象具有非响应式属性：如果修改这些属性，使用这些属性的视图将不会更新。如果我们将 [session] 对象存储在视图的响应式数据中，就可以使其成为响应式的。这就是 [vuejs-14] 项目所演示的内容。</p>
-<p>该项目的目录结构如下：</p>
-<p><img src="images/10000000000001740000014D42EFA022.png" width="130" height="116" style="width:3.44cm;height:3.08cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001740000014D42EFA022.png" /></p>
-<p><a id="refheadingtoc24809527284961301"></a></p>
-<h2 id="161-session">16.1. <span style="color: #4f81bd">[session] <strong>对象</strong></span></h2>
-<p>所有组件共享的 <strong>[session]</strong> 对象保持不变。</p>
-<p><a id="refheadingtoc24809727284961301"></a></p>
-<h2 id="162-pluginspluginsession">16.2. <span style="color: #4f81bd">[./plugins/pluginSession] 插件</span></h2>
-<p><strong>[pluginSession]</strong> 脚本保持不变。共享的 <strong>[session]</strong> 对象可通过所有组件的 <strong>[$session]</strong> 属性访问。</p>
-<p><a id="refheadingtoc24809927284961301"></a></p>
-<h2 id="163-mainjs">16.3. <span style="color: #4f81bd"><strong>主脚本</strong> [main.js]</span></h2>
-<p>主脚本 <strong>[main.js]</strong> 保持不变。</p>
-<p><a id="refheadingtoc24810127284961301"></a></p>
-<h2 id="164-app">16.4. <span style="color: #4f81bd"><strong>主视图</strong> [App]</span></h2>
-<p><strong>[App]</strong> 视图现如下所示：</p>
+<p><span id="refheadingtoc2480932728496130" name="refheadingtoc2480932728496130" class="odt-bookmark-anchor"></span></p>
+<h1 id="15-vuejs-13">15. <span style="color: #365f91"><strong>项目</strong> [vuejs-13]<strong>：组件更新，使用会话</strong></span></h1>
+<p>项目 <strong>[vuejs-13]</strong> 基于项目 <strong>[vuejs-12]</strong>，并进行了以下修改：由表 HTML 显示的表格被定义在一个<strong>名为 [session]</strong> 的对象中，该对象为所有组件所共享。 因此，这是一种在组件之间共享信息的方式。该概念直接借鉴了 Web 会话的思路。我们采用插件方法，将该共享对象作为 <strong>[Vue.$session]</strong> 属性提供。</p>
+<p>项目结构如下：</p>
+<p><img src="images/10000000000001AF0000014C57F3066B.png" width="151" height="116" style="width:3.992cm;height:3.069cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001AF0000014C57F3066B.png" /></p>
+<p><span id="refheadingtoc2480952728496130" name="refheadingtoc2480952728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="151-session">15.1. <span style="color: #4f81bd"><strong>对象</strong> [session]</span></h2>
+<p>由所有组件共享的 <strong>[session]</strong> 对象在脚本 <strong>[./session.js]</strong> 中定义：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> session = {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 模拟列表</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">get</span><span style="color:#000000"> lignes() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">._lignes;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 生成模拟列表</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  generateLignes() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._lignes =</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      [</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        { id: 3, marié: </span><span style="color:#a31515">&quot;oui&quot;</span><span style="color:#000000">, enfants: 2, salaire: 35000, impôt: 1200 },</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        { id: 5, marié: </span><span style="color:#a31515">&quot;non&quot;</span><span style="color:#000000">, enfants: 2, salaire: 35000, impôt: 1900 },</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        { id: 7, marié: </span><span style="color:#a31515">&quot;non&quot;</span><span style="color:#000000">, enfants: 0, salaire: 30000, impôt: 2000 }</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      ]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 删除索引号为 n 的行</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  deleteLigne(index) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._lignes.splice(index, 1);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导出对象 [session]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> session;</span></span></span>
+</code></pre></div>
+
+<p><span id="refheadingtoc2480972728496130" name="refheadingtoc2480972728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="152-pluginspluginsession">15.2. <span style="color: #4f81bd">插件 [./plugins/pluginSession]</span></h2>
+<p>脚本 <strong>[pluginSession]</strong> 如下：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  install(Vue, session) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 向视图类添加属性 [$session]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    Object.defineProperty(Vue.prototype, </span><span style="color:#a31515">&#x27;$session&#x27;</span><span style="color:#000000">, {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 当引用 Vue.$session 被引用时，将方法 [install] 的第二个参数 [session] 渲染出来</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      get: () =&gt; session,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    })</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<ul>
+  <li>第 4 行：共享对象 <b>[session] </b>将作为所有组件的 <b>[$session]</b> 属性提供；
+  </li>
+</ul>
+
+<p><span id="refheadingtoc2480992728496130" name="refheadingtoc2480992728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="153-mainjs">15.3. <span style="color: #4f81bd"><strong>主脚本</strong> [main.js]</span></h2>
+<p>主脚本 <strong>[main.js]</strong> 如下：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Vue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> App </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./App.vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 插件</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> BootstrapVue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap-vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">Vue.use(BootstrapVue);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// bootstrap</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap/dist/css/bootstrap.css&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap-vue/dist/bootstrap-vue.css&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 会话</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> session </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./session&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> pluginSession </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./plugins/pluginSession&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">Vue.use(pluginSession, session)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 配置</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Vue.config.productionTip = </span><span style="color:#0000ff">false</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 项目实例化[App]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">new</span><span style="color:#000000"> Vue({</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  render: h =&gt; h(App),</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}).$mount(&#x27;#应用程序&#x27;)</span></span>
+</code></pre></div>
+
+<ul>
+  <li>第 14-16 行：插件 <b>[pluginSession]</b> 已集成到框架 <b>[Vue.js]</b> 中；
+  </li>
+  <li>第16行之后<b>，[$session]</b>属性对所有组件可用；
+  </li>
+</ul>
+
+<p><span id="refheadingtoc2481012728496130" name="refheadingtoc2481012728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="154-app">15.4. <span style="color: #4f81bd"><strong>主视图</strong> [App]</span></h2>
+<p>视图 <strong>[App]</strong> 现如下所示：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#000000"> </span><span style="color:#ff0000">class</span><span style="color:#0000ff">=&quot;container&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- message --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- 消息 --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;success&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">[vuejs-14] : utilisation d&#x27;un objet partagé entre composants</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">[vuejs-13]</span><span style="color:#000000"> : mise à jour d&#x27;un composant, partage des données avec une session</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- table HTML --&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Table</span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- 表HTML --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="background-color:#ffff00;color:#800000">Table</span><span style="color:#000000"> </span><span style="color:#ff0000">@updateTable</span><span style="color:#0000ff">=&quot;updateTable&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:key</span><span style="color:#0000ff">=&quot;versionTable&quot;/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Table </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./components/Table&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="background-color:#ffff00;color:#000000">Table</span><span style="color:#000000"> </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./components/</span><span style="background-color:#ffff00;color:#a31515">Table</span><span style="color:#a31515">&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// nom</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 名称</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// composants</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 组件</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  components: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    Table</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="background-color:#ffff00;color:#000000">Table</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// cycle de vie</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  created() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// génération du tableau des simulations</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.$session.generateLignes();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 内部状态</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  data() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 表版本</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      versionTable: 1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 方法</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  methods: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    updateTable() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// eslint-disable-next-line</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;App updateTable&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 版本表递增</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">this</span><span style="color:#000000">.versionTable++;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><strong>评论</strong></p>
+<p><strong>注释</strong></p>
 <ul>
-  <li>第 9 行：<b>[Table]</b> 组件不再发出 <b>[updateTable]</b> 事件，该事件会触发 <b>[Table]</b> 组件的重新生成。因此，已移除了 [updateTable] 方法；
+  <li>视图 <b>[App]</b> 不再管理第 9 行中组件 <b>[Table]</b> 显示的数组；
+  </li>
+  <li>第 9 行：组件 <b>[Table]</b> 触发事件 [updateTable]，该事件要求重新生成组件 <b>[Table]</b>。 实现此功能的一种方法是使用属性 <b>[:key]</b>。将该属性设为可修改值。每次修改该值时，组件 <b>[Table]</b> 都会被重新生成；
+  </li>
+  <li>第 9 行：<b>[:key]</b> 属性的值即为第 27 行中的 <b>[versionTable]</b> 属性。 方法 <b>[updateTable]</b>（第 33-38 行）负责重新生成第 9 行中的组件 <b>[Table]</b>。 为此，该方法会递增第37行<b>组件[Table]</b>的<b>属性[:key]</b>的值。随后，组件<b>[Table]</b>将自动重新生成；
   </li>
 </ul>
-<p><a id="refheadingtoc24810327284961301"></a></p>
-<h2 id="165-table">16.5. <span style="color: #4f81bd">[Table] <strong>组件</strong></span></h2>
-<p><strong>[Table]</strong> 组件的演变如下：</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+
+<p><span id="refheadingtoc2481032728496130" name="refheadingtoc2481032728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="155-table">15.5. <span style="color: #4f81bd"><strong>组件</strong> [Table]</span></h2>
+<p>组件 <strong>[Table]</strong> 的变化如下：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- liste vide --&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;lignes.length==0&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- 空列表 --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;</span><span style="background-color:#ffff00;color:#0000ff">lignes</span><span style="color:#0000ff">.length==0&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Votre liste de simulations est vide</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- bouton de rechargement--&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- 刷新按钮--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">@click</span><span style="color:#0000ff">=&quot;rechargerListe&quot;&gt;</span><span style="color:#000000">Recharger la liste</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-button</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- liste non vide--&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;lignes.length!=0&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- 非空列表--&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;</span><span style="background-color:#ffff00;color:#0000ff">lignes</span><span style="color:#0000ff">.length!=0&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;lignes.length==0&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Liste de vos simulations</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- tableau des simulations --&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-table</span><span style="color:#000000"> </span><span style="color:#ff0000">striped</span><span style="color:#000000"> </span><span style="color:#ff0000">hover</span><span style="color:#000000"> </span><span style="color:#ff0000">responsive</span><span style="color:#000000"> </span><span style="color:#ff0000">:items</span><span style="color:#0000ff">=&quot;lignes&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:fields</span><span style="color:#0000ff">=&quot;fields&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- 模拟表 --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-table</span><span style="color:#000000"> </span><span style="color:#ff0000">striped</span><span style="color:#000000"> </span><span style="color:#ff0000">hover</span><span style="color:#000000"> </span><span style="color:#ff0000">responsive</span><span style="color:#000000"> </span><span style="color:#ff0000">:items</span><span style="color:#0000ff">=&quot;</span><span style="background-color:#ffff00;color:#0000ff">lignes</span><span style="color:#0000ff">&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:fields</span><span style="color:#0000ff">=&quot;fields&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">v-slot:cell(action)</span><span style="color:#0000ff">=&quot;row&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;link&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">@click</span><span style="color:#0000ff">=&quot;supprimerLigne(row.index)&quot;&gt;</span><span style="color:#000000">Supprimer</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-button</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1048,16 +1143,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// calculated state</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 计算结果</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  computed: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    lignes() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">.session.lignes;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="background-color:#ffff00;color:#000000">lignes</span><span style="color:#000000">() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">.$session.lignes;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// inner state</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 内部状态</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  data() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      fields: [</span></span>
@@ -1067,28 +1162,27 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        { label: </span><span style="color:#a31515">&quot;Salaire&quot;</span><span style="color:#000000">, key: </span><span style="color:#a31515">&quot;salaire&quot;</span><span style="color:#000000"> },</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        { label: </span><span style="color:#a31515">&quot;Impôt&quot;</span><span style="color:#000000">, key: </span><span style="color:#a31515">&quot;impôt&quot;</span><span style="color:#000000"> },</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        { label: </span><span style="color:#a31515">&quot;&quot;</span><span style="color:#000000">, key: </span><span style="color:#a31515">&quot;action&quot;</span><span style="color:#000000"> }</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      ],</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      session : {}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      ]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    };</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// life cycle</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  created(){</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.session=</span><span style="color:#0000ff">this</span><span style="color:#000000">.$session</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// methods</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 方法</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  methods: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    supprimerLigne(index) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// eslint-disable-next-line</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;Table supprimerLigne&quot;</span><span style="color:#000000">, index);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// delete the line</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">this</span><span style="color:#000000">.session.deleteLigne(index);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 删除该行</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">this</span><span style="color:#000000">.$session.deleteLigne(index);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 请求父组件更新视图</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">this</span><span style="color:#000000">.$emit(</span><span style="color:#a31515">&quot;updateTable&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// reload displayed list</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 重新加载显示的列表</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    rechargerListe() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// eslint-disable-next-line</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;Table rechargerListe&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// the list of simulations is generated</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">this</span><span style="color:#000000">.session.generateLignes();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 重新生成模拟列表</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">this</span><span style="color:#000000">.$session.generateLignes();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 请求父组件更新视图</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">this</span><span style="color:#000000">.$emit(</span><span style="color:#a31515">&quot;updateTable&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
@@ -1097,16 +1191,18 @@
 
 <p><strong>注释：</strong></p>
 <ul>
-  <li>新功能位于第 49–51 行：当视图创建时，会话 [this.$session] 被存储在第 45 行的 [session] 属性中。置于此处的 [session] 属性是响应式的；
+  <li>属性 <b>[lignes]</b>（第 4、12、17 行）不再是父组件设定的参数，而是组件 <b>[Table]</b>（第 30-32 行）的计算属性。 因此，<b>[lignes]</b> 即为数组 <b>[$session.lignes]</b>（第 31 行）；
   </li>
-  <li>第 58 行和第 65 行：我们不再使用 [this.$session] 向表格中添加或移除行，而是使用响应式属性 [this.session]；
+  <li>第49-56行：<b>方法</b>[supprimerLigne]会<b>从表[$session.lignes]中</b>删除一行。默认情况下，此删除操作不会改变表HTML的显示。实际上， <b>[$session]中的</b>元素<b>不具备响应性</b>：对其的修改不会反映到使用它们的组件上。因此，<b>[Table]</b>组件会通过<b>[updateTable]</b>事件 （第 55 行）请求其父级重新生成它。我们看到，父组件随后会递增 <b>[Table]</b> 组件的 <b>[:key]</b> 属性，以强制其重新生成；
+  </li>
+  <li>第 58-65 行：方法 <b>[rechargerListe]</b> 要求对象 <b>[$session]</b> 重新生成数组 <b>[$session.lignes]</b>。 与前文所述原因相同，默认情况下，对 <b>[$session.liste]</b> 的此项修改不会改变表 HTML 的显示。 因此，组件 <b>[Table]</b> 通过事件 <b>[updateTable]</b>（第 64 行）请求其父级对其进行重新生成。
   </li>
 </ul>
 
-<p><a id="refheadingtoc24810527284961301"></a></p>
-<h2 id="166">16.6. <span style="color: #4f81bd"><strong><span style="color: #4f81bd">运行项目</span></strong></span></h2>
-<p><img src="images/1000000000000711000001D306C4CF0C.png" width="543" height="140" style="width:14.362cm;height:3.708cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000711000001D306C4CF0C.png" /></p>
-<p>我们得到了与 <strong>[vuejs-12]</strong> 项目中相同的结果。</p>
+<p><span id="refheadingtoc2481052728496130" name="refheadingtoc2481052728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="156">15.6. <span style="color: #4f81bd">项目执行</span></h2>
+<p><img src="images/10000000000006FF0000025B003B9340.png" width="537" height="181" style="width:14.22cm;height:4.791cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006FF0000025B003B9340.png" /></p>
+<p>结果与项目 <strong>[vuejs-12]</strong> 相同。</p>
 
 
 
